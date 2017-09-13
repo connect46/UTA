@@ -1,0 +1,1388 @@
+<!DOCTYPE html>
+<!--[if IE 9]>         <html class="ie9 no-focus" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-focus" lang="en"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+
+        <title>Connect46 Untethered Application for Behavioral Health</title>
+
+        <meta name="description" content="Connect46 Untethered Application for Behavioral Health">
+        <meta name="author" content="Connect46 LLC">
+        <meta name="robots" content="noindex, nofollow">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0">
+
+        <!-- Icons -->
+        <!-- The following icons can be replaced with your own, they are used by desktop and mobile browsers -->
+        <link rel="shortcut icon" href="assets/img/favicons/favicon.png">
+
+        <link rel="icon" type="image/png" href="assets/img/favicons/favicon-16x16.png" sizes="16x16">
+        <link rel="icon" type="image/png" href="assets/img/favicons/favicon-32x32.png" sizes="32x32">
+        <link rel="icon" type="image/png" href="assets/img/favicons/favicon-96x96.png" sizes="96x96">
+        <link rel="icon" type="image/png" href="assets/img/favicons/favicon-160x160.png" sizes="160x160">
+        <link rel="icon" type="image/png" href="assets/img/favicons/favicon-192x192.png" sizes="192x192">
+
+        <link rel="apple-touch-icon" sizes="57x57" href="assets/img/favicons/apple-touch-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="assets/img/favicons/apple-touch-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="assets/img/favicons/apple-touch-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="assets/img/favicons/apple-touch-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="assets/img/favicons/apple-touch-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="assets/img/favicons/apple-touch-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="assets/img/favicons/apple-touch-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="assets/img/favicons/apple-touch-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicons/apple-touch-icon-180x180.png">
+        <!-- END Icons -->
+
+        <!-- Stylesheets -->
+        <!-- Web fonts -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400italic,600,700%7COpen+Sans:300,400,400italic,600,700">
+
+        <!-- Page JS Plugins CSS -->
+        <link rel="stylesheet" href="assets/js/plugins/datatables/jquery.dataTables.min.css">
+        <link rel="stylesheet" href="assets/js/plugins/bootstrap-datetimepicker/bootstrap-datetimepicker.min.css">
+        <link rel="stylesheet" href="assets/js/plugins/select2/select2.min.css">
+        <link rel="stylesheet" href="assets/js/plugins/select2/select2-bootstrap.min.css">        
+
+        <!-- Bootstrap and OneUI CSS framework -->
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <link rel="stylesheet" id="css-main" href="assets/css/oneui.min.css">
+
+        <!-- You can include a specific file from css/themes/ folder to alter the default color theme of the template. eg: -->
+        <!-- <link rel="stylesheet" id="css-theme" href="assets/css/themes/flat.min.css"> -->
+        <!-- END Stylesheets -->
+    </head>
+    <body>
+        <!-- Page Content -->
+       <div id="page-container" class="sidebar-l sidebar-mini sidebar-o side-scroll header-navbar-fixed ">
+            <!-- Side Overlay-->
+
+            <!-- END Side Overlay -->
+
+            <!-- Sidebar -->
+            <nav id="sidebar">
+                <!-- Sidebar Scroll Container -->
+                <div id="sidebar-scroll">
+                    <!-- Sidebar Content -->
+                    <!-- Adding .sidebar-mini-hide to an element will hide it when the sidebar is in mini mode -->
+                    <div class="sidebar-content">
+                        <!-- Side Header -->
+                        <div class="side-header side-content bg-white-op">
+                            <!-- Layout API, functionality initialized in App() -> uiLayoutApi() -->
+                            <button class="btn btn-link text-gray pull-right hidden-md hidden-lg" type="button" data-toggle="layout" data-action="sidebar_close">
+                                <i class="fa fa-times"></i>
+                            </button>
+                            <!-- Themes functionality initialized in App() -> uiHandleTheme() -->
+                            <div class="btn-group pull-right">
+                                <button class="btn btn-link text-gray dropdown-toggle" data-toggle="dropdown" type="button">
+                                    <i class="si si-drop"></i>
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-right font-s13 sidebar-mini-hide">
+                                    <li>
+                                        <a data-toggle="theme" data-theme="default" tabindex="-1" href="javascript:void(0)">
+                                            <i class="fa fa-circle text-default pull-right"></i> <span class="font-w600">Default</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a data-toggle="theme" data-theme="assets/css/themes/amethyst.min.css" tabindex="-1" href="javascript:void(0)">
+                                            <i class="fa fa-circle text-amethyst pull-right"></i> <span class="font-w600">Amethyst</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a data-toggle="theme" data-theme="assets/css/themes/city.min.css" tabindex="-1" href="javascript:void(0)">
+                                            <i class="fa fa-circle text-city pull-right"></i> <span class="font-w600">City</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a data-toggle="theme" data-theme="assets/css/themes/flat.min.css" tabindex="-1" href="javascript:void(0)">
+                                            <i class="fa fa-circle text-flat pull-right"></i> <span class="font-w600">Flat</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a data-toggle="theme" data-theme="assets/css/themes/modern.min.css" tabindex="-1" href="javascript:void(0)">
+                                            <i class="fa fa-circle text-modern pull-right"></i> <span class="font-w600">Modern</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a data-toggle="theme" data-theme="assets/css/themes/smooth.min.css" tabindex="-1" href="javascript:void(0)">
+                                            <i class="fa fa-circle text-smooth pull-right"></i> <span class="font-w600">Smooth</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <a class="h5 text-white" href="javascript:void(0)">
+                                <i class="fa fa-circle-o-notch text-primary"></i> <span class="h4 font-w600 sidebar-mini-hide">ne</span>
+                            </a>
+                        </div>
+                        <!-- END Side Header -->
+
+                        <!-- Side Content -->
+                        <div class="side-content side-content-full">
+                            <ul class="nav-main">
+                                <li>
+                                    <a class="active" href="dashboard.html"><i class="si si-speedometer"></i><span class="sidebar-mini-hide">Dashboard</span></a>
+                                </li>
+                                <li>
+                                    <a href="clients.html"><i class="si si-eye"></i><span class="sidebar-mini-hide">Client visit</span></a>
+                                </li>
+                                <li>
+                                    <a href="completeProgressNotes.html"><i class="si si-pencil"></i><span class="sidebar-mini-hide">Complete Progress Note</span></a>
+                                </li>
+                                <li>
+                                    <a href="sync.html"><i class="si si-refresh"></i><span class="sidebar-mini-hide">Sync to Server</span></a>
+                                </li>
+                                <li>
+                                    <a href="status.html"><i class="si si-question"></i><span class="sidebar-mini-hide">Sync Status</span></a>
+                                </li>                                                          
+                            </ul>
+                        </div>
+                        <!-- END Side Content -->
+                    </div>
+                    <!-- Sidebar Content -->
+                </div>
+                <!-- END Sidebar Scroll Container -->
+            </nav>
+            <!-- END Sidebar -->
+
+            <!-- Header -->
+            <header id="header-navbar" class="content-mini content-mini-full">
+                <!-- Header Navigation Right -->
+                <ul class="nav-header pull-right">
+                    <li>
+                        <div class="btn-group">
+                            <button class="btn btn-default btn-image dropdown-toggle" data-toggle="dropdown" type="button" aria-expanded="false">
+                                <img src="assets/img/avatars/calvin.jpeg" alt="Avatar">
+                                <span class="caret"></span>
+                            </button>
+                        <ul class="dropdown-menu dropdown-menu-right">
+                            <li class="dropdown-header">Profile</li>
+                            <li>
+                                <a tabindex="-1" href="profile.html">
+                                    <i class="si si-user pull-right"></i>Profile
+                                    
+                                </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li class="dropdown-header">Actions</li>
+                            <li>
+                                <a tabindex="-1" href="login.html">
+                                <i class="si si-logout pull-right"></i>Log out
+                                </a>
+                            </li>
+                        </ul>
+                        </div>
+                    </li>
+                </ul>
+                <!-- END Header Navigation Right -->
+
+                <!-- Header Navigation Left -->
+                <ul class="nav-header pull-left">
+                    <li class="hidden-md hidden-lg">
+                        <!-- Layout API, functionality initialized in App() -> uiLayoutApi() -->
+                        <button class="btn btn-default" data-toggle="layout" data-action="sidebar_toggle" type="button">
+                            <i class="fa fa-navicon"></i>
+                        </button>
+                    </li>
+                    <li class="hidden-xs hidden-sm">
+                        <!-- Layout API, functionality initialized in App() -> uiLayoutApi() -->
+                        <button class="btn btn-default" data-toggle="layout" data-action="sidebar_mini_toggle" type="button">
+                            <i class="fa fa-ellipsis-v"></i>
+                        </button>
+                    </li>
+                    <li class="visible-xs">
+                        <!-- Toggle class helper (for .js-header-search below), functionality initialized in App() -> uiToggleClass() -->
+                        <button class="btn btn-default" data-toggle="class-toggle" data-target=".js-header-search" data-class="header-search-xs-visible" type="button">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </li>
+                </ul>
+                <!-- END Header Navigation Left -->
+            </header>
+            <!-- END Header -->
+
+            <!-- Main Container -->
+            <main id="main-container">
+                <!-- Page Header -->
+                <div class="content bg-gray-lighter">
+                    <div class="row items-push">
+                        <div class="col-sm-7">
+                            <h1 class="page-heading">
+                                Carson Palmer <small>DOB: 06/12/1986</small>
+                            </h1>                            
+                        </div>
+                        <div class="col-sm-5 text-right hidden-xs">
+                            <ol class="breadcrumb push-10-t">
+                                <li>Home</li>
+                                <li><a class="link-effect" href="clients.html">My Clients</a></li>
+                                <li><a class="link-effect" href="recordService.html">Record Service</a></li>
+                            </ol>
+                        </div>                       
+                    </div>
+                </div>
+                <!-- END Page Header -->                
+                <!-- Page Content -->
+                <div class="content">
+                    <!-- Customer Info -->
+                    <!-- END Customer Info -->
+                    <!-- Tabbed patient info -->
+                            <div class="block">
+                                <ul class="nav nav-tabs nav-tabs-alt nav-justified" data-toggle="tabs">
+                                    <li class="active">
+                                        <a href="#btabs-alt-static-justified-demographics"><i class="fa fa-users"></i> Demographics</a>
+                                    </li>
+                                    <li>
+                                        <a href="#btabs-alt-static-justified-diagnosis"><i class="fa fa-stethoscope"></i> Diagnosis, Meds & Vitals</a>
+                                    </li>                                    
+                                    <li>
+                                        <a href="#btabs-alt-static-justified-treatmentPlan"><i class="fa fa-list-ol"></i> Treatment Plan</a>
+                                    </li>
+                                    <!--li>
+                                        <a href="#btabs-alt-static-justified-programServiceItems"><i class="fa fa-list-alt"></i> Program & Service Items</a>
+                                    </li-->
+                                    <li>
+                                        <a href="#btabs-alt-static-justified-progressNoteTemplates"><i class="fa fa-pencil"></i> Progress Notes</a>
+                                    </li>
+                                </ul>
+                                <div class="block-content tab-content">
+                                    <div class="tab-pane active" id="btabs-alt-static-justified-demographics">
+                                        <!--h4 class="font-w300 push-15">Demographics</h4-->
+                                        <!-- BEGIN Demographics Tab -->
+                                        <!-- Stats-->
+                                        <div class="block">
+                                            <div class="row items-push text-uppercase">
+                                                <div class="col-xs-6 col-sm-3 ">
+                                                    <div class="font-w700 text-gray-darker animated fadeIn">Enrolled Date</div>
+                                                    <a class="h2 font-w300 text-primary" href="javascript:void(0)">07/19/2014</a>
+                                                </div>
+                                                <div class="col-xs-6 col-sm-3">
+                                                    <div class="font-w700 text-gray-darker animated fadeIn">Last Visit Date</div>
+                                                    <a class="h2 font-w300 text-primary" href="javascript:void(0)">07/27/2017</a>
+                                                </div>
+                                                <div class="col-xs-6 col-sm-3">
+                                                    <div class="font-w700 text-gray-darker animated fadeIn">Total Visits</div>
+                                                    <a class="h2 font-w300 text-primary" href="javascript:void(0)">19</a>
+                                                </div>
+                                                <div class="col-xs-6 col-sm-3">
+                                                    <div class="font-w700 text-gray-darker animated fadeIn">Remaining Authorized</div>
+                                                    <a class="h2 font-w300 text-primary" href="javascript:void(0)">5</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- END Stats -->
+                                            <!-- Addresses -->
+                                            <div class="block">
+                                                <div class="block-header bg-gray-lighter">
+                                                    <h3 class="block-title">Addresses</h3>
+                                                </div>
+                                                <div class="block-content">
+                                                    <div class="row">
+                                                        <div class="col-lg-6">
+                                                            <!-- Home Address -->
+                                                            <div class="block block-bordered">
+                                                                <div class="block-header">
+                                                                    <h3 class="block-title">Home Address</h3>
+                                                                </div>
+                                                                <div class="block-content block-content-full">
+                                                                    <div class="h4 push-5">Mr. Carson Palmer</div>
+                                                                    <address>
+                                                                        2222 Sunrise Str, Apt. 598<br>
+                                                                        Maricopa<br>
+                                                                        Arizona, 85138<br><br>
+                                                                        <i class="fa fa-phone"></i> (520) 888-7777<br><br>
+                                                                        <i class="fa fa-envelope-o"></i> <a href="javascript:void(0)">cpalmer@example.com</a>
+                                                                    </address>
+                                                                </div>
+                                                            </div>
+                                                            <!-- END Home Address -->
+                                                        </div>
+                                                        <div class="col-lg-6">
+                                                            <!-- Work / school Address -->
+                                                            <div class="block block-bordered">
+                                                                <div class="block-header">
+                                                                    <h3 class="block-title">Work Address</h3>
+                                                                </div>
+                                                                <div class="block-content block-content-full">
+                                                                    <div class="h4 push-5">Clarion Enterprises LLC</div>
+                                                                    <address>
+                                                                        1111 Sunset Street, Suite 660<br>
+                                                                        Maricopa<br>
+                                                                        Arizona, 85138<br><br>
+                                                                        <i class="fa fa-phone"></i> (520) 888-55555<br><br>
+                                                                        <i class="fa fa-envelope-o"></i> <a href="javascript:void(0)">cpalmer@clarionllc.com</a>
+                                                                    </address>
+                                                                </div>
+                                                            </div>
+                                                            <!-- END Shipping Address -->
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- END Addresses -->
+
+                                            <!-- Next of Kin -->
+                                            <div class="block">
+                                                <div class="block-header bg-gray-lighter">
+                                                    <h3 class="block-title">Contacts and Relationship <small>(4)</small></h3>
+                                                </div>
+                                                <div class="block-content">
+                                                    <table class="table table-header-bg table-vcenter">
+                                                        <thead>
+                                                            <tr>
+                                                                <th style="width:200px">Name</th>
+                                                                <th>Relationship</th>
+                                                                <th>Contact Phone</th>
+                                                                <th class="hidden-xs" style="width:200px">Contact Address</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>
+                                                                    <a class="font-" href="javascript:void(0)">
+                                                                        <strong>Torrance Palmer</strong>
+                                                                    </a>
+                                                                </td>
+                                                                <td>Father
+                                                                </td>
+                                                                <td>(520) 555-1234
+                                                                </td>
+                                                                <td class="hidden-xs">111 S. Hamish St, Apt 23, Maricopa AZ 95234
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <a class="font-" href="javascript:void(0)">
+                                                                        <strong>Marisol Palmer</strong>
+                                                                    </a>
+                                                                </td>
+                                                                <td>Mother
+                                                                </td>
+                                                                <td>(520) 555-2234
+                                                                </td>
+                                                                <td class="hidden-xs">111 S. Hamish St, Apt 23, Maricopa AZ 95234
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <a class="font-" href="javascript:void(0)">
+                                                                        <strong>Hector Palmer</strong>
+                                                                    </a>
+                                                                </td>
+                                                                <td>Uncle
+                                                                </td>
+                                                                <td>(520) 555-1224
+                                                                </td>
+                                                                <td class="hidden-xs">232 N. Garland, Apt 23, Maricopa AZ 95234
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <a class="font-" href="javascript:void(0)">
+                                                                        <strong>Mary Jamison</strong>
+                                                                    </a>
+                                                                </td>
+                                                                <td>Grandmother
+                                                                </td>
+                                                                <td>(520) 565-1234
+                                                                </td>
+                                                                <td class="hidden-xs">199 Sunset Blvd., Apt 23, Maricopa AZ 95234
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                            <!-- END Next of Kin -->
+
+                                            <!-- Care Team -->
+                                            <div class="block">
+                                                <div class="block-header bg-gray-lighter">
+                                                    <h3 class="block-title">Care Team Members <small>(5)</small></h3>
+                                                </div>
+                                                <div class="block-content">
+                                                    <table class="table table-header-bg table-vcenter">
+                                                        <thead>
+                                                            <tr>
+                                                                <th style="width: 150px">Name</th>
+                                                                <th style="width: 100px">Role</th>
+                                                                <th style="width: 150px">Contact Phone</th>
+                                                                <th class="hidden-xs">Organization</th>
+                                                                <th style="width: 200px" class="hidden-xs">Address</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>
+                                                                    <a class="font-" href="javascript:void(0)">
+                                                                        <strong>Pouya Pierce MD</strong>
+                                                                    </a>
+                                                                </td>
+                                                                <td>Primary Care Physician</td>
+                                                                <td>(520) 555-1234</td>
+                                                                <td class="hidden-xs">Arizona Primary Care Inc.</td>
+                                                                <td class="hidden-xs">111 S. Hamish St, # 100, Maricopa AZ 95234</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <a class="font-" href="javascript:void(0)">
+                                                                        <strong>Sharda Cooper, MD; PsyD</strong>
+                                                                    </a>
+                                                                </td>
+                                                                <td>Psychiatrist</td>
+                                                                <td>(520) 555-1234</td>
+                                                                <td class="hidden-xs">Devereux Advanced Behavioral Health</td>
+                                                                <td class="hidden-xs">100 Devereux Way, Maricopa AZ 95234</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <a class="font-" href="javascript:void(0)">
+                                                                        <strong>Michael Gurley</strong>
+                                                                    </a>
+                                                                </td>
+                                                                <td>Behavior Coach</td>
+                                                                <td>(520) 555-1234</td>
+                                                                <td class="hidden-xs">Arizona Primary Care Inc.</td>
+                                                                <td class="hidden-xs">100 Devereux Way, Maricopa AZ 95234</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <a class="font-" href="javascript:void(0)">
+                                                                        <strong>Calvin Hanson</strong>
+                                                                    </a>
+                                                                </td>
+                                                                <td>Metro Outpatient Counselor</td>
+                                                                <td>(520) 555-1234</td>
+                                                                <td>Arizona Primary Care Inc.</td>
+                                                                <td>100 Devereux Way, Maricopa AZ 95234</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <a class="font-" href="javascript:void(0)">
+                                                                        <strong>Terry Johnson</strong>
+                                                                    </a>
+                                                                </td>
+                                                                <td>Clinical Coordinator</td>
+                                                                <td>(520) 555-1234</td>
+                                                                <td>Arizona Primary Care Inc.</td>
+                                                                <td>100 Devereux Way, Maricopa AZ 95234</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                            <!-- END Care Team -->
+
+                                            <!-- Insurance -->
+                                            <div class="block">
+                                                <div class="block-header bg-gray-lighter">
+                                                    <h3 class="block-title">Insurance Details <small>(3)</small></h3>
+                                                </div>
+                                                <div class="block-content">
+                                                    <div class="row">
+                                                        <div class="col-sm-6 col-lg-4">
+                                                            <a class="block block-rounded block-bordered block-link-hover3" href="javascript:void(0)">
+                                                                <div class="block-content block-content-full clearfix">
+                                                                    <!--div class="pull-right">
+                                                                        <img class="img-avatar" src="assets/img/avatars/medicaid.png" alt="">
+                                                                    </div-->
+                                                                    <div class="pull-left push-10-t">
+                                                                        <div class="font-w600 push-5">Medicaid</div>
+                                                                        <div class="text-muted"> Group #: XXXXXX6651</div>
+                                                                        <div class="text-muted"> Member #: XXXXXX6651</div>
+                                                                        <div class="text-muted"> Expiry Date: 10/1/2021</div>
+                                                                    </div>
+                                                                </div>
+                                                            </a>
+                                                        </div>                                                    
+                                                        <div class="col-sm-6 col-lg-4">
+                                                            <a class="block block-rounded block-bordered block-link-hover3" href="javascript:void(0)">
+                                                                <div class="block-content block-content-full clearfix">
+                                                                    <!--div class="pull-right">
+                                                                        <img class="img-avatar" src="assets/img/avatars/bcbs.jpeg" alt="">
+                                                                    </div-->
+                                                                    <div class="pull-left push-10-t">
+                                                                        <div class="font-w600 push-5">BCBS AZ</div>
+                                                                        <div class="text-muted"> Group #: XXXXXX6651</div>
+                                                                        <div class="text-muted"> Member #: XXXXXX6651</div>
+                                                                        <div class="text-muted"> Expiry Date: 10/1/2021</div>
+                                                                    </div>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- END Insurance -->
+
+                                        <!-- END Demographics Tab -->
+                                    </div>
+                                    <div class="tab-pane" id="btabs-alt-static-justified-diagnosis">
+                                        <!--h4 class="font-w300 push-15">Diagnosis</h4-->
+                                            <!-- Diagnosis, Meds and vitals-->
+                                            <div class="block">
+                                                <!--div class="block-header bg-gray-lighter">
+                                                    <h3 class="block-title">Diagnosis <small>(3)</small></h3>
+                                                </div-->
+                                                <div class="block-content">
+                                                    <table class="table table-header-bg table-vcenter">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>Diagnosis Code</th>
+                                                                <th>Description</th>
+                                                                <th>Active</th>
+                                                                <th class="hidden-xs">Diagnosis Date</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>F34.81
+                                                                </td>
+                                                                <td>Disruptive Mood Dysregulation Disorder
+                                                                </td>
+                                                                <td>Active
+                                                                </td>
+                                                                <td>11/30/2002
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>F12.20
+                                                                </td>
+                                                                <td>Cannabis Use Disorder, Severe
+                                                                </td>
+                                                                <td>Active
+                                                                </td>
+                                                                <td>11/30/2004
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>F42.1
+                                                                </td>
+                                                                <td>Obsessive Complusive Disorder
+                                                                </td>
+                                                                <td>Inactive
+                                                                </td>
+                                                                <td>09/01/2001
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                                <div class="block-content">
+                                                    <table class="table table-header-bg table-vcenter">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>Medication Name</th>
+                                                                <th>Dose / Instructions</th>
+                                                                <th>Rx Date</th>
+                                                                <th>Rx for</th>
+                                                                <th>Active</th>
+                                                                <th class="hidden-xs">Prescriber</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>Fluticasone
+                                                                </td>
+                                                                <td>50 mcg/actuation spary, suspension - 1 spray into both nostrils once a day
+                                                                </td>
+                                                                <td>06/30/2017
+                                                                </td>
+                                                                <td>Shortness of breath
+                                                                </td>
+                                                                <td>Yes</td>
+                                                                <td>Robert Pardee, DO, BHP</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Guanfacine
+                                                                </td>
+                                                                <td>1 mg tablet - 1 tablet by mouth three times a day
+                                                                </td>
+                                                                <td>06/30/2017
+                                                                </td>
+                                                                <td>Impulse Anxiety
+                                                                </td>
+                                                                <td>Yes</td>
+                                                                <td>Robert Pardee, DO, BHP</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Lithium Carbonate
+                                                                </td>
+                                                                <td>450 mg tablet extended release - 1 tablet by mouth twice a day
+                                                                </td>
+                                                                <td>06/30/2017
+                                                                </td>
+                                                                <td>Mood, Agitation
+                                                                </td>
+                                                                <td>Yes</td>
+                                                                <td>Robert Pardee, DO, BHP</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Seroquel
+                                                                </td>
+                                                                <td>100 mg tablet - 1 1/2 tablet by mouth at bedtime
+                                                                </td>
+                                                                <td>06/30/2016
+                                                                </td>
+                                                                <td>Mood, Agitation
+                                                                </td>
+                                                                <td>No</td>
+                                                                <td>Robert Pardee, DO, BHP</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                                <div class="block-content">
+                    <!-- Jquery Sparkline (initialized in js/pages/base_comp_charts.js), for more examples you can check out http://omnipotent.net/jquery.sparkline/#s-about -->
+                    <h2 class="content-heading">Sparkline</h2>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <!-- Bars -->
+                            <div class="block">
+                                <div class="block-header">
+                                    <ul class="block-options">
+                                        <li>
+                                            <button type="button" data-toggle="block-option" data-action="refresh_toggle" data-action-mode="demo"><i class="si si-refresh"></i></button>
+                                        </li>
+                                    </ul>
+                                    <h3 class="block-title">Bars</h3>
+                                </div>
+                                <div class="block-content">
+                                    <canvas class="js-chartjs-lines js-chartjs-bars js-chartjs-radar js-chartjs-polar js-chartjs-pie js-chartjs-donut"></canvas>
+                                    <div class="row items-push-2x text-center">
+                                        <div class="col-xs-6 col-sm-4">
+                                            <!-- Sparkline Bar 1 Container -->
+                                            <span class="js-slc-bar1">4,3,2,4,5,7,8,4</span>
+                                            <div class="push-10-t"><i class="fa fa-ticket text-muted"></i> Tickets</div>
+                                        </div>
+                                        <div class="col-xs-6 col-sm-4">
+                                            <!-- Sparkline Bar 2 Container -->
+                                            <span class="js-slc-bar2">980,1210,1350,900,500,700,1500,1485</span>
+                                            <div class="push-10-t"><i class="fa fa-line-chart text-muted"></i> Earnings</div>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-4">
+                                            <!-- Sparkline Bar 3 Container -->
+                                            <span class="js-slc-bar3">8,11,9,8,7,5,10,12</span>
+                                            <div class="push-10-t"><i class="fa fa-suitcase text-muted"></i> Sales</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- END Bars -->
+                        </div>
+                        <div class="col-lg-6">
+                            <!-- Lines -->
+                            <div class="block">
+                                <div class="block-header">
+                                    <ul class="block-options">
+                                        <li>
+                                            <button type="button" data-toggle="block-option" data-action="refresh_toggle" data-action-mode="demo"><i class="si si-refresh"></i></button>
+                                        </li>
+                                    </ul>
+                                    <h3 class="block-title">Lines</h3>
+                                </div>
+                                <div class="block-content">
+                                    <div class="row items-push-2x text-center">
+                                        <div class="col-xs-6 col-sm-4">
+                                            <!-- Sparkline Line 1 Container -->
+                                            <span class="js-slc-line1">4,3,2,4,5,7,8,4</span>
+                                            <div class="push-10-t"><i class="fa fa-ticket text-muted"></i> Tickets</div>
+                                        </div>
+                                        <div class="col-xs-6 col-sm-4">
+                                            <!-- Sparkline Line 2 Container -->
+                                            <span class="js-slc-line2">980,1210,1350,900,500,700,1500,1485</span>
+                                            <div class="push-10-t"><i class="fa fa-line-chart text-muted"></i> Earnings</div>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-4">
+                                            <!-- Sparkline Line 3 Container -->
+                                            <span class="js-slc-line3">8,11,9,8,7,5,10,12</span>
+                                            <div class="push-10-t"><i class="fa fa-suitcase text-muted"></i> Sales</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- END Lines -->
+                        </div>
+                        <div class="col-lg-6">
+                            <!-- Pie -->
+                            <div class="block">
+                                <div class="block-header">
+                                    <ul class="block-options">
+                                        <li>
+                                            <button type="button" data-toggle="block-option" data-action="refresh_toggle" data-action-mode="demo"><i class="si si-refresh"></i></button>
+                                        </li>
+                                    </ul>
+                                    <h3 class="block-title">Pie</h3>
+                                </div>
+                                <div class="block-content">
+                                    <div class="row items-push-2x text-center">
+                                        <div class="col-xs-6 col-sm-4">
+                                            <!-- Sparkline Pie 1 Container -->
+                                            <span class="js-slc-pie1">4,3,2,4</span>
+                                            <div class="push-10-t"><i class="fa fa-ticket text-muted"></i> Tickets</div>
+                                        </div>
+                                        <div class="col-xs-6 col-sm-4">
+                                            <!-- Sparkline Pie 2 Container -->
+                                            <span class="js-slc-pie2">980,1210,1350,900</span>
+                                            <div class="push-10-t"><i class="fa fa-line-chart text-muted"></i> Earnings</div>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-4">
+                                            <!-- Sparkline Pie 3 Container -->
+                                            <span class="js-slc-pie3">8,11,9,8</span>
+                                            <div class="push-10-t"><i class="fa fa-suitcase text-muted"></i> Sales</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- END Pie -->
+                        </div>
+                        <div class="col-lg-6">
+                            <!-- Tristate -->
+                            <div class="block">
+                                <div class="block-header">
+                                    <ul class="block-options">
+                                        <li>
+                                            <button type="button" data-toggle="block-option" data-action="refresh_toggle" data-action-mode="demo"><i class="si si-refresh"></i></button>
+                                        </li>
+                                    </ul>
+                                    <h3 class="block-title">Tristate</h3>
+                                </div>
+                                <div class="block-content">
+                                    <div class="row items-push-2x text-center">
+                                        <div class="col-xs-6 col-sm-4">
+                                            <!-- Sparkline Tristate 1 Container -->
+                                            <span class="js-slc-tristate1">-1,1,0,1,1,-1,0,1</span>
+                                        </div>
+                                        <div class="col-xs-6 col-sm-4">
+                                            <!-- Sparkline Tristate 2 Container -->
+                                            <span class="js-slc-tristate2">1,1,0,1,-1,-1,1,-1</span>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-4">
+                                            <!-- Sparkline Tristate 3 Container -->
+                                            <span class="js-slc-tristate3">1,-1,0,-1,-1,0,0,1</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- END Tristate -->
+                        </div>
+                    </div>
+                    <!-- END Sparkline Charts -->
+                                                </div>
+                                            </div>
+                                            <!-- END  Diagnosis, Meds and Vitals-->
+                                    </div>
+                                    <div class="tab-pane" id="btabs-alt-static-justified-treatmentPlan">
+                                                    <!-- Treatment Plan -->
+                                                    <div class="block">
+                                                        <!--div class="block-header bg-gray-lighter">
+                                                            <h3 class="block-title">Diagnosis <small>(3)</small></h3>
+                                                        </div-->
+                                                        <div class="block-content">
+                                                            <table class="table table-header-bg table-vcenter">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th>Program Name</th>
+                                                                        <th>Service Item</th>
+                                                                        <th>Accumulated Units</th>
+                                                                        <th>Authorized Units</th>
+                                                                        <th>Planned Units</th>
+                                                                        <th>Active</th>
+                                                                        <th class="text-center">Record Service</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>High Needs</td>
+                                                                        <td>Case Management</td>
+                                                                        <td>3650</td>
+                                                                        <td><span class="label label-danger">3550</span></td>
+                                                                        <td><span class="label label-danger">3550</span></td>
+                                                                        <td><span class="label label-success">Yes</span></td>
+                                                                        <td class="text-center">
+                                                                            <div class="btn-group">
+                                                                                <a class="btn btn-md btn-default" type="button" data-toggle="tab" title="Record Note" href=""><i class="fa fa-play"></i> </a>
+                                                                            </div>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td></td>
+                                                                        <td>Group Skills & Development</td>
+                                                                        <td>1650</td>
+                                                                        <td><span class="label label-success">2000</span></td>
+                                                                        <td><span class="label label-success">2000</span></td>
+                                                                        <td><span class="label label-success">Yes</span></td>
+                                                                        <td class="text-center">
+                                                                            <div class="btn-group">
+                                                                                <a class="btn btn-md btn-default" type="button" data-toggle="tab" title="Record Note" href=""><i class="fa fa-play"></i> </a>
+                                                                            </div>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td></td>
+                                                                        <td>Skills Building & Development </td>
+                                                                        <td>900</td>
+                                                                        <td><span class="label label-warning">1000</span></td>
+                                                                        <td><span class="label label-warning">1000</span></td>
+                                                                        <td><span class="label label-success">Yes</span></td>
+                                                                        <td class="text-center">
+                                                                            <div class="btn-group">
+                                                                                <a class="btn btn-md btn-default" type="button" data-toggle="tab" title="Record Note" href=""><i class="fa fa-play"></i> </a>
+                                                                            </div>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Community & Family Services</td>
+                                                                        <td>Case Management</td>
+                                                                        <td>3650</td>
+                                                                        <td><span class="label label-danger">3550</span></td>
+                                                                        <td><span class="label label-danger">3550</span></td>
+                                                                        <td><span class="label label-success">Yes</span></td>
+                                                                        <td class="text-center">
+                                                                            <div class="btn-group">
+                                                                                <a class="btn btn-md btn-default" type="button" data-toggle="tab" title="Record Note" href=""><i class="fa fa-play"></i> </a>
+                                                                            </div>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td></td>
+                                                                        <td>Contact Note</td>
+                                                                        <td>950</td>
+                                                                        <td><span class="label label-success">2000</span></td>
+                                                                        <td><span class="label label-success">2000</span></td>
+                                                                        <td><span class="label label-success">Yes</span></td>
+                                                                        <td class="text-center">
+                                                                            <div class="btn-group">
+                                                                                <a class="btn btn-md btn-default" type="button" data-toggle="tab" title="Record Note" href=""><i class="fa fa-play"></i> </a>
+                                                                            </div>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td></td>
+                                                                        <td>Family Support</td>
+                                                                        <td>900</td>
+                                                                        <td><span class="label label-warning">1000</span></td>
+                                                                        <td><span class="label label-warning">1000</span></td>
+                                                                        <td><span class="label label-success">Yes</span></td>
+                                                                        <td class="text-center">
+                                                                            <div class="btn-group">
+                                                                                <a class="btn btn-md btn-default" type="button" data-toggle="tab" title="View Details" href=""><i class="fa fa-play"></i> </a>
+                                                                            </div>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td></td>
+                                                                        <td>Independent Living</td>
+                                                                        <td>850</td>
+                                                                        <td><span class="label label-success">2000</span></td>
+                                                                        <td><span class="label label-success">2000</span></td>
+                                                                        <td><span class="label label-success">Yes</span></td>
+                                                                        <td class="text-center">
+                                                                            <div class="btn-group">
+                                                                                <a class="btn btn-md btn-default" type="button" data-toggle="tab" title="View Details" href=""><i class="fa fa-play"></i> </a>
+                                                                            </div>
+                                                                        </td>
+                                                                    </tr>                                                                   
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                    <!-- END  Treatment Plan -->
+                                    </div>
+                                    <div class="tab-pane" id="btabs-alt-static-justified-progressNoteTemplates">
+                                        <h4 class="font-w300 push-15">Cost Center: (3090) AZ Maricopa - Community and Family Services</h4>
+                                        <div class="js-wizard-simple block">
+                                            <!-- Step Tabs -->
+                                            <ul class="nav nav-tabs nav-tabs-alt nav-justified">
+                                                <li class="active">
+                                                    <a href="#core" data-toggle="tab">1. Core Information</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#attendees" data-toggle="tab">2. Attendees</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#go" data-toggle="tab">3. Goals & Objectives</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#clientSign" data-toggle="tab">4. Client Signature</a>
+                                                </li>
+                                            </ul>
+                                            <!-- END Step Tabs -->
+
+                                            <!-- Form -->
+                                            <form class="form-horizontal" action="??" method="post">
+                                                <!-- Steps Content -->
+                                                <div class="block-content tab-content">
+                                                    <!-- Step 1 -->
+                                                    <div class="tab-pane fade in push-30-t push-50 active" id="core">
+                                                        <div class="block block-bordered">
+                                                            <div class="block-header bg-gray-lighter">
+                                                                <h5>This is the core set of information required before a progress note can be submitted</h5>
+                                                            </div>
+                                                            <div class="block-content">
+                                                                <form class="form-horizontal push-10-t push-10" action="" method="post" onsubmit="return false;">
+                                                                    <div class="row">
+                                                                        <div class="col-sm-10">
+                                                                            <div class="form-group">
+                                                                                <div class="col-xs-6">
+                                                                                    <div class="js-datetimepicker form-material input-group date" data-show-today-button="true" data-show-clear="true" data-show-close="true" data-side-by-side="true">
+                                                                                        <input class="form-control" type="text" id="example-datetimepicker8" name="example-datetimepicker8" placeholder="Choose a date and time..">
+                                                                                        <label for="example-datetimepicker8">Start Date & Time</label>
+                                                                                        <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-xs-6">
+                                                                                    <div class="js-datetimepicker form-material input-group date" data-show-today-button="true" data-show-clear="true" data-show-close="true" data-side-by-side="true">
+                                                                                        <input class="form-control" type="text" id="example-datetimepicker8" name="example-datetimepicker8" placeholder="Choose a date and time..">
+                                                                                        <label for="example-datetimepicker8">End Date & Time</label>
+                                                                                        <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-sm-2">
+                                                                            <div class="form-group">
+                                                                                <div class="col-xs-12">
+                                                                                    <label for="mega-lastname">Duration</label>
+                                                                                    <input class="form-control input-lg" type="text" id="calculatedDuration" name="calculatedDuration" placeholder="Calculated Duration (mins)">
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <div class="col-sm-6">
+                                                                            <div class="form-group">
+                                                                                <div class="col-xs-12">
+                                                                                    <div class="form-material">
+                                                                                        <select class="js-select2 form-control" id="placeOfService" name="placeOfService" style="width: 100%;" data-placeholder="Choose one..">
+                                                                                            <option></option><!-- Required for data-placeholder attribute to work with Select2 plugin -->
+                                                                                            <option value="01">Pharmacy</option>
+                                                                                            <option value="03">School</option>
+                                                                                            <option value="04">Homeless Shelter</option>
+                                                                                            <option value="09">Prison/Correction</option>
+                                                                                            <option value="11">Office</option>
+                                                                                            <option value="12">Home</option>
+                                                                                            <option value="13">Assisted Living</option>
+                                                                                            <option value="14">Group Home </option>
+                                                                                            <option value="15">Mobile Unit </option>
+                                                                                            <option value="16">Temporary Lodging </option>
+                                                                                            <option value="21">Inpatient Hospital </option>
+                                                                                            <option value="22">Outpatient Hospital </option>
+                                                                                            <option value="33">Custodial Care </option>
+                                                                                            <option value="51">Inpatient Psych </option>
+                                                                                            <option value="52">Pysch Partial Hosp </option>
+                                                                                            <option value="53">Community MH Center </option>
+                                                                                            <option value="54">ICFMR </option>
+                                                                                            <option value="55">Res. Substance Abuse </option>
+                                                                                            <option value="56">Psych Res Treatment </option>
+                                                                                            <option value="57">Non-Res Subtance </option>
+                                                                                            <option value="99">Other</option>
+                                                                                        </select>
+                                                                                        <label for="example2-select2">Place of Service</label>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-sm-6">
+                                                                            <div class="form-group">
+                                                                                <div class="col-xs-12">
+                                                                                    <div class="form-material">
+                                                                                        <select class="js-select2 form-control" id="deliveryMethod" name="deliveryMethod" style="width: 100%;" data-placeholder="Choose one..">
+                                                                                            <option></option><!-- Required for data-placeholder attribute to work with Select2 plugin -->
+                                                                                            <option value="01">Face to Face</option>
+                                                                                            <option value="02">Telephone</option>
+                                                                                            <option value="03">Written</option>
+                                                                                            <option value="04">Video Conference</option>
+                                                                                            <option value="05">Email</option>
+                                                                                        </select>
+                                                                                        <label for="example2-select2">Delivery Method</label>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <div class="col-sm-6">
+                                                                            <div class="form-group">
+                                                                                <div class="col-xs-12">
+                                                                                    <div class="form-material">
+                                                                                        <select class="js-select2 form-control" id="progressNoteTemplate" name="progressNoteTemplate" style="width: 100%;" data-placeholder="Choose one..">
+                                                                                            <option></option><!-- Required for data-placeholder attribute to work with Select2 plugin -->
+                                                                                            <option value ="01">Case Contact Note</option>
+                                                                                            <option value ="02">CFT Note</option>
+                                                                                            <option value ="03">Service Delivery Note – General</option>
+                                                                                        </select>
+                                                                                        <label for="progressNoteTemplate">Progress Note Template</label>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-sm-6">
+                                                                            <div class="form-group">
+                                                                                <div class="col-xs-12">
+                                                                                <label class="col-xs-12">Signature Exempt?</label>
+                                                                                <div class="col-xs-12">
+                                                                                    <label class="css-input css-radio css-radio-warning push-10-r">
+                                                                                        <input type="radio" name="signatureExemptYes"><span></span> Yes
+                                                                                    </label>
+                                                                                    <label class="css-input css-radio css-radio-warning">
+                                                                                        <input type="radio" name="signatureExemptNo"><span></span> No
+                                                                                    </label>
+                                                                                </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>                                
+                                                                </form>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- END Step 1 -->
+                                                    <div class="tab-pane fade push-30-t push-50" id="attendees">
+                                                        <!-- Step 2 - Attendees -->
+                                                        <div class="block">
+                                                            <div class="block-header">
+                                                                <h3 class="block-title">Select attendees present during service</h3>
+                                                            </div>
+                                                            <div class="block-content">
+                                                                <table class="table table-header-bg table-vcenter">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th>Present?</th>
+                                                                            <th>Name</th>
+                                                                            <th>Relationship</th>
+                                                                            <th>Contact Info</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <label class="css-input css-checkbox css-checkbox-success">
+                                                                                    <input type="checkbox" unchecked><span></span>
+                                                                                </label>
+                                                                            </td>
+                                                                            <td>Jason Arrozzo
+                                                                            </td>
+                                                                            <td>Social Worker / Case Manager
+                                                                            </td>
+                                                                            <td>(520) 665-1234, (520) 665-1235
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <label class="css-input css-checkbox css-checkbox-success">
+                                                                                    <input type="checkbox" unchecked><span></span>
+                                                                                </label>
+                                                                            </td>
+                                                                            <td>Mark Christian
+                                                                            </td>
+                                                                            <td>Attorney
+                                                                            </td>
+                                                                            <td>(650) 555-1234
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <label class="css-input css-checkbox css-checkbox-success">
+                                                                                    <input type="checkbox" unchecked><span></span>
+                                                                                </label>
+                                                                            </td>
+                                                                            <td>April Lasseter
+                                                                            </td>
+                                                                            <td>School Official
+                                                                            </td>
+                                                                            <td>(520) 665-1234 ext.12530
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <label class="css-input css-checkbox css-checkbox-success">
+                                                                                    <input type="checkbox" unchecked><span></span>
+                                                                                </label>
+                                                                            </td>
+                                                                            <td>Laurie Johnson
+                                                                            </td>
+                                                                            <td>Mother
+                                                                            </td>
+                                                                            <td>(620) 665-1234
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <label class="css-input css-checkbox css-checkbox-success">
+                                                                                    <input type="checkbox" unchecked><span></span>
+                                                                                </label>
+                                                                            </td>
+                                                                            <td>Mark Johnson
+                                                                            </td>
+                                                                            <td>Father
+                                                                            </td>
+                                                                            <td>(620) 665-1235
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <label class="css-input css-checkbox css-checkbox-success">
+                                                                                    <input type="checkbox" unchecked><span></span>
+                                                                                </label>
+                                                                            </td>
+                                                                            <td>
+                                                                                <div class="form-group">
+                                                                                    <label class="sr-only" for="example-if-name">Name</label>
+                                                                                    <input class="form-control" type="Name" id="example-if-name" name="example-if-name" placeholder="Enter Full Name..">
+                                                                                </div>
+                                                                            </td>
+                                                                            <td>
+                                                                                <div class="form-group">
+                                                                                    <label class="sr-only" for="example-if-rel">Relationship</label>
+                                                                                    <input class="form-control" type="relationship" id="example-if-relationship" name="example-if-relationship" placeholder="Select Relationship">
+                                                                                </div>
+                                                                            </td>
+                                                                            <td>
+                                                                                <div class="form-group">
+                                                                                    <label class="sr-only" for="example-if-phone">Phone</label>
+                                                                                    <input class="form-control" type="email" id="example-if-phone" name="example-if-phone" placeholder="Enter Phone..">
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                <div class="block-content">
+                                                    <h3 class="block-title">Team Members</h3>
+                                                    <table class="table table-header-bg table-vcenter">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>Present?</th>
+                                                                <th>Name</th>
+                                                                <th>Relationship</th>
+                                                                <th>Contact Info</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>
+                                                                    <label class="css-input css-checkbox css-checkbox-success">
+                                                                        <input type="checkbox" unchecked><span></span>
+                                                                    </label>
+                                                                </td>
+                                                                <td>Jason Arrozzo
+                                                                </td>
+                                                                <td>Social Worker / Case Manager
+                                                                </td>
+                                                                <td>(520) 665-1234, (520) 665-1235
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <label class="css-input css-checkbox css-checkbox-success">
+                                                                        <input type="checkbox" unchecked><span></span>
+                                                                    </label>
+                                                                </td>
+                                                                <td>Mark Christian
+                                                                </td>
+                                                                <td>Attorney
+                                                                </td>
+                                                                <td>(650) 555-1234
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <label class="css-input css-checkbox css-checkbox-success">
+                                                                        <input type="checkbox" unchecked><span></span>
+                                                                    </label>
+                                                                </td>
+                                                                <td>April Lasseter
+                                                                </td>
+                                                                <td>School Official
+                                                                </td>
+                                                                <td>(520) 665-1234 ext.12530
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <label class="css-input css-checkbox css-checkbox-success">
+                                                                        <input type="checkbox" unchecked><span></span>
+                                                                    </label>
+                                                                </td>
+                                                                <td>Laurie Johnson
+                                                                </td>
+                                                                <td>Mother
+                                                                </td>
+                                                                <td>(620) 665-1234
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <label class="css-input css-checkbox css-checkbox-success">
+                                                                        <input type="checkbox" unchecked><span></span>
+                                                                    </label>
+                                                                </td>
+                                                                <td>Mark Johnson
+                                                                </td>
+                                                                <td>Father
+                                                                </td>
+                                                                <td>(620) 665-1235
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <label class="css-input css-checkbox css-checkbox-success">
+                                                                        <input type="checkbox" unchecked><span></span>
+                                                                    </label>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="form-group">
+                                                                        <label class="sr-only" for="example-if-name">Name</label>
+                                                                        <input class="form-control" type="Name" id="example-if-name" name="example-if-name" placeholder="Enter Full Name..">
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="form-group">
+                                                                        <label class="sr-only" for="example-if-rel">Relationship</label>
+                                                                        <input class="form-control" type="relationship" id="example-if-relationship" name="example-if-relationship" placeholder="Select Relationship">
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="form-group">
+                                                                        <label class="sr-only" for="example-if-phone">Phone</label>
+                                                                        <input class="form-control" type="email" id="example-if-phone" name="example-if-phone" placeholder="Enter Phone..">
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                                        </div>
+                                                        <!-- END Step 2 - Attendees -->
+                                                    </div>
+                                                <!-- Step 3 - GO (Goals, Objectives) -->
+                                                    <div class="tab-pane fade push-30-t push-50" id="go">
+                                                            <div class="block-header bg-gray-lighter">
+                                                                <h5>Send client signature confirmation</h5>
+                                                            </div>
+                                                            <div>
+                                                                <br>
+                                                                <br>
+                                                                <p>Take a picture of the client's signature on a piece of paper with today's date and send it to this address - cart.element.robin@uta.devereux.org</p> <!--See this article re using words to uniquely identify an individual -->
+                                                            </div>
+                                                    </div>
+                                                <!-- END Step 3 - GO (Goals, Objectives) -->
+                                                    <!-- Step 4 - Signature -->
+                                                    <div class="tab-pane fade push-30-t push-50" id="clientSign">
+                                                            <div class="block-header bg-gray-lighter">
+                                                                <h5>Send client signature confirmation</h5>
+                                                            </div>
+                                                            <div>
+                                                                <br>
+                                                                <br>
+                                                                <p>Take a picture of the client's signature on a piece of paper with today's date and send it to this address - cart.element.robin@uta.devereux.org</p> <!--See this article re using words to uniquely identify an individual -->
+                                                            </div>
+                                                    </div>
+                                                    <!-- END Step 4 - Signature -->
+                                                </div>
+                                                <!-- END Steps Content -->
+
+                                                <!-- Steps Navigation -->
+                                                <div class="block-content block-content-mini block-content-full border-t">
+                                                    <div class="row">
+                                                        <div class="col-xs-6">
+                                                            <button class="wizard-prev btn btn-warning" type="button"><i class="fa fa-arrow-circle-o-left"></i> Previous</button>
+                                                        </div>
+                                                        <div class="col-xs-6 text-right">
+                                                            <button class="wizard-next btn btn-success" type="button">Save & Next <i class="fa fa-arrow-circle-o-right"></i></button>
+                                                            <button class="wizard-finish btn btn-primary" type="submit" action=""><i class="fa fa-check-circle-o"></i> Add to Queue</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- END Steps Navigation -->
+                                            </form>
+                                            <!-- END Form -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                </div>
+                <!-- END Page Content -->
+            </main>
+            <!-- END Main Container -->
+   
+
+        <!-- END Page Content -->
+
+        <!-- Page Footer -->
+            <footer id="page-footer" class="content-mini content-mini-full font-s12 bg-gray-lighter clearfix">
+                <div class="pull-right">
+                    Crafted with <i class="fa fa-heart text-city"></i> by <a class="font-w600" href="https://connect46.com" target="_blank">Connect46 LLC</a>
+                </div>
+                <div class="pull-left">
+                    <a class="font-w600" href="https://connect46.com" target="_blank">Connect46 LLC</a> &copy; <span class="js-year-copy"></span>
+                </div>
+            </footer>        
+
+        <!-- END Page Footer -->
+
+        <!-- OneUI Core JS: jQuery, Bootstrap, slimScroll, scrollLock, Appear, CountTo, Placeholder, Cookie and App.js -->
+        <script src="assets/js/oneui.min.js"></script>
+        <script src="assets/js/core/jquery.min.js"></script>
+        <script src="assets/js/core/bootstrap.min.js"></script>
+        <script src="assets/js/core/jquery.slimscroll.min.js"></script>
+        <script src="assets/js/core/jquery.scrollLock.min.js"></script>
+        <script src="assets/js/core/jquery.appear.min.js"></script>
+        <script src="assets/js/core/jquery.countTo.min.js"></script>
+        <script src="assets/js/core/jquery.placeholder.min.js"></script>
+        <script src="assets/js/core/js.cookie.min.js"></script>
+        <script src="assets/js/app.js"></script>
+
+        <!-- Page JS Plugins -->
+        <script src="assets/js/plugins/datatables/jquery.dataTables.min.js"></script>
+        <script src="assets/js/plugins/bootstrap-wizard/jquery.bootstrap.wizard.min.js"></script>
+        <script src="assets/js/plugins/jquery-validation/jquery.validate.min.js"></script> 
+        <script src="assets/js/plugins/bootstrap-datetimepicker/moment.min.js"></script>        
+        <script src="assets/js/plugins/bootstrap-datetimepicker/bootstrap-datetimepicker.min.js"></script>
+        <script src="assets/js/plugins/select2/select2.full.min.js"></script>
+        <!-- END Page JS Plugins -->
+
+                <!-- OneUI Core JS: jQuery, Bootstrap, slimScroll, scrollLock, Appear, CountTo, Placeholder, Cookie and App.js -->
+        <script src="assets/js/core/jquery.min.js"></script>
+        <script src="assets/js/core/bootstrap.min.js"></script>
+        <script src="assets/js/core/jquery.slimscroll.min.js"></script>
+        <script src="assets/js/core/jquery.scrollLock.min.js"></script>
+        <script src="assets/js/core/jquery.appear.min.js"></script>
+        <script src="assets/js/core/jquery.countTo.min.js"></script>
+        <script src="assets/js/core/jquery.placeholder.min.js"></script>
+        <script src="assets/js/core/js.cookie.min.js"></script>
+        <script src="assets/js/app.js"></script>
+
+        <!-- Page JS Plugins -->
+        <script src="assets/js/plugins/sparkline/jquery.sparkline.min.js"></script>
+        <script src="assets/js/plugins/easy-pie-chart/jquery.easypiechart.min.js"></script>
+        <script src="assets/js/plugins/chartjs/Chart.min.js"></script>
+        <script src="assets/js/plugins/flot/jquery.flot.min.js"></script>
+        <script src="assets/js/plugins/flot/jquery.flot.pie.min.js"></script>
+        <script src="assets/js/plugins/flot/jquery.flot.stack.min.js"></script>
+        <script src="assets/js/plugins/flot/jquery.flot.resize.min.js"></script>
+
+        <!-- Page JS Code -->
+        <script src="assets/js/pages/base_comp_charts.js"></script>
+        <script>
+            jQuery(function () {
+                // Init page helpers (Easy Pie Chart plugin)
+                App.initHelpers('easy-pie-chart');
+            });
+        </script>
+
+        <!-- Page JS Code -->
+
+        <script>
+            jQuery(function () {
+                // Init page helpers (BS Datepicker + BS Datetimepicker + BS Colorpicker + BS Maxlength + Select2 + Masked Input + Range Sliders + Tags Inputs plugins)
+                App.initHelpers(['datepicker', 'datetimepicker', 'select2']);
+            });
+        </script>
+        <script>
+            $('a#btabs-alt-static-justified-demographics').on('shown.bs.tab', function (e) {
+              // add the related JS code init sparkline (found in js/pages/base_comp_charts.js)
+            jQuery(function(){ initChartsSparkline.init(); });
+            });        
+        </script>
+
+        <!-- END Page JS Code -->
+    </body>
+</html>

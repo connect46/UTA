@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<!--[if IE 9]>         <html class="ie9 no-focus" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-focus" lang="en"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+
+        <title>Connect46 Untethered Application for Behavioral Health</title>
+
+        <meta name="description" content="Connect46 Untethered Application for Behavioral Health">
+        <meta name="author" content="Connect46 LLC">
+        <meta name="robots" content="noindex, nofollow">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0">
+
+        <!-- Icons -->
+        <!-- The following icons can be replaced with your own, they are used by desktop and mobile browsers -->
+        <link rel="shortcut icon" href="assets/img/favicons/favicon.png">
+
+        <link rel="icon" type="image/png" href="assets/img/favicons/favicon-16x16.png" sizes="16x16">
+        <link rel="icon" type="image/png" href="assets/img/favicons/favicon-32x32.png" sizes="32x32">
+        <link rel="icon" type="image/png" href="assets/img/favicons/favicon-96x96.png" sizes="96x96">
+        <link rel="icon" type="image/png" href="assets/img/favicons/favicon-160x160.png" sizes="160x160">
+        <link rel="icon" type="image/png" href="assets/img/favicons/favicon-192x192.png" sizes="192x192">
+
+        <link rel="apple-touch-icon" sizes="57x57" href="assets/img/favicons/apple-touch-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="assets/img/favicons/apple-touch-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="assets/img/favicons/apple-touch-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="assets/img/favicons/apple-touch-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="assets/img/favicons/apple-touch-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="assets/img/favicons/apple-touch-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="assets/img/favicons/apple-touch-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="assets/img/favicons/apple-touch-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicons/apple-touch-icon-180x180.png">
+        <!-- END Icons -->
+
+        <!-- Stylesheets -->
+        <!-- Web fonts -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400italic,600,700%7COpen+Sans:300,400,400italic,600,700">
+
+        <!-- Page JS Plugins CSS -->
+        <link rel="stylesheet" href="assets/js/plugins/datatables/jquery.dataTables.min.css">
+
+        <!-- Bootstrap and OneUI CSS framework -->
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <link rel="stylesheet" id="css-main" href="assets/css/oneui.min.css">
+
+        <!-- You can include a specific file from css/themes/ folder to alter the default color theme of the template. eg: -->
+        <!-- <link rel="stylesheet" id="css-theme" href="assets/css/themes/flat.min.css"> -->
+        <!-- END Stylesheets -->
+    </head>
+    <body>
+        <!-- Page Content -->
+       <div id="page-container" class="sidebar-l sidebar-mini sidebar-o side-scroll header-navbar-fixed">
+            <!-- Side Overlay-->
+
+            <!-- END Side Overlay -->
+
+            <!-- Sidebar -->
+            <nav id="sidebar">
+                <!-- Sidebar Scroll Container -->
+                <div id="sidebar-scroll">
+                    <!-- Sidebar Content -->
+                    <!-- Adding .sidebar-mini-hide to an element will hide it when the sidebar is in mini mode -->
+                    <div class="sidebar-content">
+                        <!-- Side Header -->
+                        <div class="side-header side-content bg-white-op">
+                            <!-- Layout API, functionality initialized in App() -> uiLayoutApi() -->
+                            <button class="btn btn-link text-gray pull-right hidden-md hidden-lg" type="button" data-toggle="layout" data-action="sidebar_close">
+                                <i class="fa fa-times"></i>
+                            </button>
+                            <!-- Themes functionality initialized in App() -> uiHandleTheme() -->
+                            <div class="btn-group pull-right">
+                                <button class="btn btn-link text-gray dropdown-toggle" data-toggle="dropdown" type="button">
+                                    <i class="si si-drop"></i>
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-right font-s13 sidebar-mini-hide">
+                                    <li>
+                                        <a data-toggle="theme" data-theme="default" tabindex="-1" href="javascript:void(0)">
+                                            <i class="fa fa-circle text-default pull-right"></i> <span class="font-w600">Default</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a data-toggle="theme" data-theme="assets/css/themes/amethyst.min.css" tabindex="-1" href="javascript:void(0)">
+                                            <i class="fa fa-circle text-amethyst pull-right"></i> <span class="font-w600">Amethyst</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a data-toggle="theme" data-theme="assets/css/themes/city.min.css" tabindex="-1" href="javascript:void(0)">
+                                            <i class="fa fa-circle text-city pull-right"></i> <span class="font-w600">City</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a data-toggle="theme" data-theme="assets/css/themes/flat.min.css" tabindex="-1" href="javascript:void(0)">
+                                            <i class="fa fa-circle text-flat pull-right"></i> <span class="font-w600">Flat</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a data-toggle="theme" data-theme="assets/css/themes/modern.min.css" tabindex="-1" href="javascript:void(0)">
+                                            <i class="fa fa-circle text-modern pull-right"></i> <span class="font-w600">Modern</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a data-toggle="theme" data-theme="assets/css/themes/smooth.min.css" tabindex="-1" href="javascript:void(0)">
+                                            <i class="fa fa-circle text-smooth pull-right"></i> <span class="font-w600">Smooth</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <a class="h5 text-white" href="javascript:void(0)">
+                                <i class="fa fa-circle-o-notch text-primary"></i> <span class="h4 font-w600 sidebar-mini-hide">ne</span>
+                            </a>
+                        </div>
+                        <!-- END Side Header -->
+
+                        <!-- Side Content -->
+                        <div class="side-content side-content-full">
+                            <ul class="nav-main">
+                                <li>
+                                    <a class="active" href="dashboard.html"><i class="si si-speedometer"></i><span class="sidebar-mini-hide">Dashboard</span></a>
+                                </li>
+                                <li class="nav-main-heading"><span class="sidebar-mini-hide">Menu</span></li>
+                                <!-- item 1 -->
+                                <li class="open">
+                                    <a class="nav-submenu" data-toggle="nav-submenu" href="#"><i class="si si-pencil"></i><span class="sidebar-mini-hide">Record</span></a>
+                                    <ul>
+                                        <li>
+                                            <a class="active" href="clients.html">My Clients</a>
+                                        </li>
+                                        <li>
+                                            <a href="pns.html">My Progress Notes</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <!-- item 1 -->
+                                <!-- item 2 -->
+                                <li>
+                                    <a class="nav-submenu" data-toggle="nav-submenu" href="#"><i class="si si-refresh"></i><span class="sidebar-mini-hide">Sync Status</span></a>
+                                    <ul>
+                                        <li>
+                                            <a href="status.html">View</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <!-- item 2 -->                                                            
+                            </ul>
+                        </div>
+                        <!-- END Side Content -->
+                    </div>
+                    <!-- Sidebar Content -->
+                </div>
+                <!-- END Sidebar Scroll Container -->
+            </nav>
+            <!-- END Sidebar -->
+
+            <!-- Header -->
+            <header id="header-navbar" class="content-mini content-mini-full">
+                <!-- Header Navigation Right -->
+                <ul class="nav-header pull-right">
+                    <li>
+                        <div class="btn-group">
+                            <button class="btn btn-default btn-image dropdown-toggle" data-toggle="dropdown" type="button" aria-expanded="false">
+                                <img src="assets/img/avatars/calvin.jpeg" alt="Avatar">
+                                <span class="caret"></span>
+                            </button>
+                        <ul class="dropdown-menu dropdown-menu-right">
+                            <li class="dropdown-header">Profile</li>
+                            <li>
+                                <a tabindex="-1" href="profile.html">
+                                    <i class="si si-user pull-right"></i>Profile
+                                    
+                                </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li class="dropdown-header">Actions</li>
+                            <li>
+                                <a tabindex="-1" href="login.html">
+                                <i class="si si-logout pull-right"></i>Log out
+                                </a>
+                            </li>
+                        </ul>
+                        </div>
+                    </li>
+                </ul>
+                <!-- END Header Navigation Right -->
+
+                <!-- Header Navigation Left -->
+                <ul class="nav-header pull-left">
+                    <li class="hidden-md hidden-lg">
+                        <!-- Layout API, functionality initialized in App() -> uiLayoutApi() -->
+                        <button class="btn btn-default" data-toggle="layout" data-action="sidebar_toggle" type="button">
+                            <i class="fa fa-navicon"></i>
+                        </button>
+                    </li>
+                    <li class="hidden-xs hidden-sm">
+                        <!-- Layout API, functionality initialized in App() -> uiLayoutApi() -->
+                        <button class="btn btn-default" data-toggle="layout" data-action="sidebar_mini_toggle" type="button">
+                            <i class="fa fa-ellipsis-v"></i>
+                        </button>
+                    </li>
+                    <li class="visible-xs">
+                        <!-- Toggle class helper (for .js-header-search below), functionality initialized in App() -> uiToggleClass() -->
+                        <button class="btn btn-default" data-toggle="class-toggle" data-target=".js-header-search" data-class="header-search-xs-visible" type="button">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </li>
+                </ul>
+                <!-- END Header Navigation Left -->
+            </header>
+            <!-- END Header -->
+
+            <!-- Main Container -->
+            <main id="main-container">
+                <!-- Page Header -->
+                <div class="content bg-gray-lighter">
+                    <div class="row items-push">
+                        <div class="col-sm-7">
+                            <h1 class="page-heading">
+                                Carson Palmer <small>DOB: 06/12/1986</small>
+                            </h1>
+                        </div>
+                        <div class="col-sm-5 text-right hidden-xs">
+                            <ol class="breadcrumb push-10-t">
+                                <li>Home</li>
+                                <li><a class="link-effect" href="clients.html">My Clients</a></li>
+                                <li><a class="link-effect" href="recordService.html">Record Service</a></li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+                <!-- END Page Header -->                
+                <!-- Page Content -->
+                <div class="content">
+                    <div class="row">
+                        <div class="col-sm-5 col-lg-3">
+                            <!-- Collapsible Inbox Navigation (using Bootstrap collapse functionality) -->
+                            <button class="btn btn-block btn-primary visible-xs push" data-toggle="collapse" data-target="#inbox-nav" type="button">Navigation</button>
+                            <div class="collapse navbar-collapse remove-padding" id="inbox-nav">
+                                <!-- Inbox Menu -->
+                                <div class="block">
+                                    <div class="block-content">
+                                        <ul class="nav nav-pills nav-stacked push">
+                                            <li>
+                                                <a href="recordService.html"><i class="fa fa-fw fa-address-card-o push-5-r"></i>Demographics</a>
+                                            </li>
+                                            <li>
+                                                <a href="diagnosis.html"><i class="fa fa-fw fa-medkit push-5-r"></i>Diagnosis</a>
+                                            </li>
+                                            <li>
+                                                <a href="treatmentPlanComponents.html"><i class="fa fa-fw fa-archive push-5-r"></i>Treatment Plan Components</a>
+                                            </li>
+                                            <li class="active">
+                                                <a href="programServiceItems.html"><i class="fa fa-fw fa-th-list push-5-r"></i>Program & Service Items</a>
+                                            </li>
+                                            <li>
+                                                <a href="progressNoteTemplates.html"><i class="fa fa-fw fa-pencil-square push-5-r"></i>Progress Note Templates</a>
+                                            </li>
+                                            <li>
+                                                <a href="patientConfirmation.html"><i class="fa fa-fw fa-thumbs-up push-5-r"></i>Patient Confirmation</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!-- END Inbox Menu -->
+                            </div>
+                            <!-- END Collapsible Inbox Navigation -->
+                        </div>
+                        <div class="col-sm-7 col-lg-9">
+                            <!-- Demographics -->
+                            <div class="block">
+                                <div class="block-header bg-gray-lighter">
+                                    <ul class="block-options">
+                                        <li>
+                                            <button type="button" data-toggle="block-option" data-action="fullscreen_toggle"></button>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="block-content">
+                                                <!-- Page Content -->
+                <div class="content content-boxed">
+                    <!-- Customer Info -->
+                    <div class="block">
+                        <!-- Basic Info -->
+                        <div class="block-content text-center overflow-hidden">
+                            <div class="push-30-t push animated fadeInDown">
+                                <img class="img-avatar" src="assets/img/avatars/calvin.jpeg" alt="">
+                            </div>
+                            <div class="push-30 animated fadeInUp">
+                                <h2 class="h4 font-w600 push-5">Carson Palmer</h2>
+                            </div>
+                        </div>
+                        <!-- END Basic Info -->
+
+                        <!-- Stats -->
+                        <div class="block-content text-center bg-gray-lighter">
+                            <div class="row items-push text-uppercase">
+                                <div class="col-xs-6 col-sm-3">
+                                    <div class="font-w700 text-gray-darker animated fadeIn">Enrolled Date</div>
+                                    <a class="h2 font-w300 text-primary" href="javascript:void(0)">07/19/2014</a>
+                                </div>
+                                <div class="col-xs-6 col-sm-3">
+                                    <div class="font-w700 text-gray-darker animated fadeIn">Last Visit Date</div>
+                                    <a class="h2 font-w300 text-primary" href="javascript:void(0)">07/27/2017</a>
+                                </div>
+                                <div class="col-xs-6 col-sm-3">
+                                    <div class="font-w700 text-gray-darker animated fadeIn">Total Visits</div>
+                                    <a class="h2 font-w300 text-primary" href="javascript:void(0)">19</a>
+                                </div>
+                                <div class="col-xs-6 col-sm-3">
+                                    <div class="font-w700 text-gray-darker animated fadeIn">Remaining Authorized</div>
+                                    <a class="h2 font-w300 text-primary" href="javascript:void(0)">5</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- END Stats -->
+                    </div>
+                    <!-- END Customer Info -->
+
+                    <!-- Addresses -->
+                    <div class="block">
+                        <div class="block-header bg-gray-lighter">
+                            <h3 class="block-title">Addresses</h3>
+                        </div>
+                        <div class="block-content">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <!-- Home Address -->
+                                    <div class="block block-bordered">
+                                        <div class="block-header">
+                                            <h3 class="block-title">Home Address</h3>
+                                        </div>
+                                        <div class="block-content block-content-full">
+                                            <div class="h4 push-5">Mr. Carson Palmer</div>
+                                            <address>
+                                                2222 Sunrise Str, Apt. 598<br>
+                                                Maricopa<br>
+                                                Arizona, 85138<br><br>
+                                                <i class="fa fa-phone"></i> (520) 888-7777<br><br>
+                                                <i class="fa fa-envelope-o"></i> <a href="javascript:void(0)">cpalmer@example.com</a>
+                                            </address>
+                                        </div>
+                                    </div>
+                                    <!-- END Home Address -->
+                                </div>
+                                <div class="col-lg-6">
+                                    <!-- Work / school Address -->
+                                    <div class="block block-bordered">
+                                        <div class="block-header">
+                                            <h3 class="block-title">Work Address</h3>
+                                        </div>
+                                        <div class="block-content block-content-full">
+                                            <div class="h4 push-5">Clarion Enterprises LLC</div>
+                                            <address>
+                                                1111 Sunset Street, Suite 660<br>
+                                                Maricopa<br>
+                                                Arizona, 85138<br><br>
+                                                <i class="fa fa-phone"></i> (520) 888-55555<br><br>
+                                                <i class="fa fa-envelope-o"></i> <a href="javascript:void(0)">cpalmer@clarionllc.com</a>
+                                            </address>
+                                        </div>
+                                    </div>
+                                    <!-- END Shipping Address -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END Addresses -->
+
+                    <!-- Next of Kin -->
+                    <div class="block">
+                        <div class="block-header bg-gray-lighter">
+                            <h3 class="block-title">Contacts and Relationship <small>(4)</small></h3>
+                        </div>
+                        <div class="block-content">
+                            <table class="table table-borderless table-striped table-vcenter">
+                                <thead>
+                                    <tr>
+                                        <th style="width:200px">Name</th>
+                                        <th>Relationship</th>
+                                        <th>Contact Phone</th>
+                                        <th class="hidden-xs" style="width:200px">Contact Address</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <a class="font-" href="javascript:void(0)">
+                                                <strong>Torrance Palmer</strong>
+                                            </a>
+                                        </td>
+                                        <td>Father
+                                        </td>
+                                        <td>(520) 555-1234
+                                        </td>
+                                        <td class="hidden-xs">111 S. Hamish St, Apt 23, Maricopa AZ 95234
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <a class="font-" href="javascript:void(0)">
+                                                <strong>Marisol Palmer</strong>
+                                            </a>
+                                        </td>
+                                        <td>Mother
+                                        </td>
+                                        <td>(520) 555-2234
+                                        </td>
+                                        <td class="hidden-xs">111 S. Hamish St, Apt 23, Maricopa AZ 95234
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <a class="font-" href="javascript:void(0)">
+                                                <strong>Hector Palmer</strong>
+                                            </a>
+                                        </td>
+                                        <td>Uncle
+                                        </td>
+                                        <td>(520) 555-1224
+                                        </td>
+                                        <td class="hidden-xs">232 N. Garland, Apt 23, Maricopa AZ 95234
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <a class="font-" href="javascript:void(0)">
+                                                <strong>Mary Jamison</strong>
+                                            </a>
+                                        </td>
+                                        <td>Grandmother
+                                        </td>
+                                        <td>(520) 565-1234
+                                        </td>
+                                        <td class="hidden-xs">199 Sunset Blvd., Apt 23, Maricopa AZ 95234
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <!-- END Next of Kin -->
+
+                    <!-- Care Team -->
+                    <div class="block">
+                        <div class="block-header bg-gray-lighter">
+                            <h3 class="block-title">Care Team Members <small>(5)</small></h3>
+                        </div>
+                        <div class="block-content">
+                            <table class="table table-borderless table-striped table-vcenter">
+                                <thead>
+                                    <tr>
+                                        <th style="width: 150px">Name</th>
+                                        <th style="width: 100px">Role</th>
+                                        <th style="width: 150px">Contact Phone</th>
+                                        <th class="hidden-xs">Organization</th>
+                                        <th style="width: 200px" class="hidden-xs">Address</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <a class="font-" href="javascript:void(0)">
+                                                <strong>Pouya Pierce MD</strong>
+                                            </a>
+                                        </td>
+                                        <td>Primary Care Physician</td>
+                                        <td>(520) 555-1234</td>
+                                        <td class="hidden-xs">Arizona Primary Care Inc.</td>
+                                        <td class="hidden-xs">111 S. Hamish St, # 100, Maricopa AZ 95234</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <a class="font-" href="javascript:void(0)">
+                                                <strong>Sharda Cooper, MD; PsyD</strong>
+                                            </a>
+                                        </td>
+                                        <td>Psychiatrist</td>
+                                        <td>(520) 555-1234</td>
+                                        <td class="hidden-xs">Devereux Advanced Behavioral Health</td>
+                                        <td class="hidden-xs">100 Devereux Way, Maricopa AZ 95234</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <a class="font-" href="javascript:void(0)">
+                                                <strong>Michael Gurley</strong>
+                                            </a>
+                                        </td>
+                                        <td>Behavior Coach</td>
+                                        <td>(520) 555-1234</td>
+                                        <td class="hidden-xs">Arizona Primary Care Inc.</td>
+                                        <td class="hidden-xs">100 Devereux Way, Maricopa AZ 95234</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <a class="font-" href="javascript:void(0)">
+                                                <strong>Calvin Hanson</strong>
+                                            </a>
+                                        </td>
+                                        <td>Metro Outpatient Counselor</td>
+                                        <td>(520) 555-1234</td>
+                                        <td>Arizona Primary Care Inc.</td>
+                                        <td>100 Devereux Way, Maricopa AZ 95234</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <a class="font-" href="javascript:void(0)">
+                                                <strong>Terry Johnson</strong>
+                                            </a>
+                                        </td>
+                                        <td>Clinical Coordinator</td>
+                                        <td>(520) 555-1234</td>
+                                        <td>Arizona Primary Care Inc.</td>
+                                        <td>100 Devereux Way, Maricopa AZ 95234</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <!-- END Care Team -->
+
+                    <!-- Insurance -->
+                    <div class="block">
+                        <div class="block-header bg-gray-lighter">
+                            <h3 class="block-title">Insurance Details <small>(3)</small></h3>
+                        </div>
+                        <div class="block-content">
+                            <div class="row">
+                                <div class="col-sm-6 col-lg-4">
+                                    <a class="block block-rounded block-bordered block-link-hover3" href="javascript:void(0)">
+                                        <div class="block-content block-content-full clearfix">
+                                            <div class="pull-right">
+                                                <img class="img-avatar" src="assets/img/avatars/avatar5.jpg" alt="">
+                                            </div>
+                                            <div class="pull-left push-10-t">
+                                                <div class="font-w600 push-5">Linda Moore</div>
+                                                <div class="text-muted">4 Orders</div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-sm-6 col-lg-4">
+                                    <a class="block block-rounded block-bordered block-link-hover3" href="javascript:void(0)">
+                                        <div class="block-content block-content-full clearfix">
+                                            <div class="pull-right">
+                                                <img class="img-avatar" src="assets/img/avatars/avatar10.jpg" alt="">
+                                            </div>
+                                            <div class="pull-left push-10-t">
+                                                <div class="font-w600 push-5">Eric Lawson</div>
+                                                <div class="text-muted">5 Orders</div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-sm-6 col-lg-4">
+                                    <a class="block block-rounded block-bordered block-link-hover3" href="javascript:void(0)">
+                                        <div class="block-content block-content-full clearfix">
+                                            <div class="pull-right">
+                                                <img class="img-avatar" src="assets/img/avatars/avatar7.jpg" alt="">
+                                            </div>
+                                            <div class="pull-left push-10-t">
+                                                <div class="font-w600 push-5">Susan Elliott</div>
+                                                <div class="text-muted">3 Orders</div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END Insurance -->
+
+                    <!-- Private Notes -->
+                    <div class="block">
+                        <div class="block-header bg-gray-lighter">
+                            <h3 class="block-title">Private Notes</h3>
+                        </div>
+                        <div class="block-content">
+                            <p class="alert alert-info"><i class="fa fa-fw fa-info push-5-r"></i> This note will not be displayed to the customer.</p>
+                            <form class="form-horizontal push-30-t push-30" action="base_pages_ecom_customer.html" method="post" onsubmit="return false;">
+                                <div class="form-group">
+                                    <div class="col-xs-12">
+                                        <div class="form-material form-material-primary">
+                                            <textarea class="form-control" id="product-customer-notes" name="product-customer-notes" rows="3"></textarea>
+                                            <label for="product-customer-notes">Note</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-xs-12">
+                                        <button class="btn btn-sm btn-primary" type="submit">Add Note</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- END Private Notes -->
+                </div>
+                <!-- END Page Content -->
+
+                                </div>
+                            </div>
+                            <!-- END Demographics-->
+                        </div>
+                    </div>
+                </div>
+                <!-- END Page Content -->
+            </main>
+            <!-- END Main Container -->
+   
+
+        <!-- END Page Content -->
+
+        <!-- Page Footer -->
+            <footer id="page-footer" class="content-mini content-mini-full font-s12 bg-gray-lighter clearfix">
+                <div class="pull-right">
+                    Crafted with <i class="fa fa-heart text-city"></i> by <a class="font-w600" href="https://connect46.com" target="_blank">Connect46 LLC</a>
+                </div>
+                <div class="pull-left">
+                    <a class="font-w600" href="https://connect46.com" target="_blank">Connect46 LLC</a> &copy; <span class="js-year-copy"></span>
+                </div>
+            </footer>        
+
+        <!-- END Page Footer -->
+
+        <!-- OneUI Core JS: jQuery, Bootstrap, slimScroll, scrollLock, Appear, CountTo, Placeholder, Cookie and App.js -->
+        <script src="assets/js/core/jquery.min.js"></script>
+        <script src="assets/js/core/bootstrap.min.js"></script>
+        <script src="assets/js/core/jquery.slimscroll.min.js"></script>
+        <script src="assets/js/core/jquery.scrollLock.min.js"></script>
+        <script src="assets/js/core/jquery.appear.min.js"></script>
+        <script src="assets/js/core/jquery.countTo.min.js"></script>
+        <script src="assets/js/core/jquery.placeholder.min.js"></script>
+        <script src="assets/js/core/js.cookie.min.js"></script>
+        <script src="assets/js/app.js"></script>
+
+        <!-- Page JS Plugins -->
+        <script src="assets/js/plugins/datatables/jquery.dataTables.min.js"></script>        
+
+        <!-- END Page JS Plugins -->
+
+        <!-- Page JS Code -->
+        <script src="assets/js/pages/base_tables_datatables.js"></script>        
+
+        <!-- END Page JS Code -->
+    </body>
+</html>
