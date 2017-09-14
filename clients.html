@@ -36,6 +36,9 @@
         <!-- Web fonts -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400italic,600,700%7COpen+Sans:300,400,400italic,600,700">
 
+        <!-- Page JS Plugins CSS -->
+        <link rel="stylesheet" href="assets/js/plugins/datatables/jquery.dataTables.min.css">
+
         <!-- Bootstrap and OneUI CSS framework -->
         <link rel="stylesheet" href="assets/css/bootstrap.min.css">
         <link rel="stylesheet" id="css-main" href="assets/css/oneui.min.css">
@@ -143,7 +146,7 @@
                     <li>
                         <div class="btn-group">
                             <button class="btn btn-default btn-image dropdown-toggle" data-toggle="dropdown" type="button" aria-expanded="false">
-                                <img src="assets/img/avatars/avatar1.jpg" alt="Avatar">
+                                <img src="assets/img/avatars/calvin.jpeg" alt="Avatar">
                                 <span class="caret"></span>
                             </button>
                         <ul class="dropdown-menu dropdown-menu-right">
@@ -195,178 +198,147 @@
             <!-- Main Container -->
             <main id="main-container">
                 <!-- Page Header -->
-                <div class="bg-image overflow-hidden" style="background-image: url('assets/img/photos/photo31@2x.jpg');">
-                    <div class="bg-black-op">
-                        <div class="content content-narrow">
-                            <div class="block block-transparent">
-                                <div class="block-content block-content-full">
-                                    <h1 class="h1 font-w300 text-white animated fadeInDown push-50-t push-5">Activity Dashboard</h1>
-                                </div>
-                            </div>
+                <div class="content bg-gray-lighter">
+                    <div class="row items-push">
+                        <div class="col-sm-7">
+                            <h1 class="page-heading">
+                                My Clients <small>Clients whose care teams I'm a part of</small>
+                            </h1>
+                        </div>
+                        <div class="col-sm-5 text-right hidden-xs">
+                            <ol class="breadcrumb push-10-t">
+                                <li>Home</li>
+                                <li><a class="link-effect" href="clients.html">My Clients</a></li>
+                            </ol>
                         </div>
                     </div>
                 </div>
                 <!-- END Page Header -->
 
                 <!-- Page Content -->
-                <div class="content content-narrow">
-
-                    <!-- Dashboard Cards -->
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <!-- Clients Card -->
-                            <div class="block">
-                                <div class="bg-image" style="background-image: url('assets/img/photos/photo33.jpg');">
-                                    <div class="bg-black-op">
-                                        <div class="block-content text-center">
-                                            <h3 class="h2 font-w300 text-uppercase text-white push-50-t">Clients Seen</h3>
-                                            <h4 class="h5 text-white-op push-50">Arizona, US</h4>
-                                        </div>
-                                        <div class="block-content block-content-full text-center bg-black-op">
-                                            <div class="row push-5-t push-5">
-                                                <div class="col-xs-4">
-                                                    <div class="h2 font-w300 text-white">8</div>
-                                                    <div class="h5 text-muted push-5-t">Today</div>
-                                                </div>
-                                                <div class="col-xs-4">
-                                                    <div class="h2 font-w300 text-white">14</div>
-                                                    <div class="h5 text-muted push-5-t">This Week</div>
-                                                </div>
-                                                <div class="col-xs-4">
-                                                    <div class="h2 font-w300 text-white">24</div>
-                                                    <div class="h5 text-muted push-5-t">This Month</div>
-                                                </div>
-                                                <!-- would have liked a sparkline here but cou;dn't get it to work -->
-                                                <!--div class="col-xs-3 col-sm-4">
-                                                    <span class="js-slc-bar1"><canvas width="106" height="70" style="display: inline-block; width: 106px; height: 70px; vertical-align: top;"></canvas></span>
-                                                </div-->
+                <div class="content">
+                    <!-- My Block -->
+                            <!-- Dynamic Table Full -->
+                    <div class="block">
+                        <div class="block-content">
+                            <!-- DataTables init on table by adding .js-dataTable-full class, functionality initialized in js/pages/base_tables_datatables.js -->
+                            <table class="table table-header-bg js-dataTable-full">
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>ID</th>
+                                        <th class="hidden-xs">DOB</th>
+                                        <th class="hidden-xs">Gender</th>
+                                        <th class="hidden-xs">Center</th>
+                                        <th class="hidden-xs">Location</th>
+                                        <th style="width: 15%;">Program</th>
+                                        <th class="text-center" style="width: 10%;">Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="font-w600">Eugene Burke</td>
+                                        <td>100030</td>
+                                        <td class="hidden-xs">10/01/1981</td>
+                                        <td class="hidden-xs">M</td>
+                                        <td class="hidden-xs">Arizona</td>
+                                        <td class="hidden-xs">Maricopa</td>
+                                        <td class="hidden-xs">Community & Family Services</td>
+                                        <td class="text-center">
+                                            <div class="btn-group">
+                                                <a class="btn btn-md btn-default" type="button" data-toggle="tooltip" title="View Details" href="recordService.html"><i class="fa fa-eye"></i> </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="font-w600">Thomas Hardy</td>
+                                        <td>100031</td>
+                                        <td class="hidden-xs">11/01/1981</td>
+                                        <td class="hidden-xs">M</td>
+                                        <td class="hidden-xs">Arizona</td>
+                                        <td class="hidden-xs">Maricopa</td>
+                                        <td class="hidden-xs">Community & Family Services</td>
+                                        <td class="text-center">
+                                            <div class="btn-group">
+                                                <a class="btn btn-md btn-default" type="button" data-toggle="tooltip" title="View Details" href="recordService.html"><i class="fa fa-eye"></i> </a>
                                             </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- END Clients Card -->
-                        </div>
-                        <div class="col-lg-6">
-                            <!-- Recorded Services Card -->
-                            <div class="block">
-                                <div class="bg-image" style="background-image: url('assets/img/photos/photo33.jpg');">
-                                    <div class="bg-black-op">
-                                        <div class="block-content text-center">
-                                            <h3 class="h2 font-w300 text-uppercase text-white push-50-t">Services Recorded</h3>
-                                            <h4 class="h5 text-white-op push-50">Arizona, US</h4>
-                                        </div>
-                                        <div class="block-content block-content-full text-center bg-black-op">
-                                            <div class="row push-5-t push-5">
-                                                <div class="col-xs-4">
-                                                    <div class="h2 font-w300 text-white">12</div>
-                                                    <div class="h5 text-muted push-5-t">Today</div>
-                                                </div>
-                                                <div class="col-xs-4">
-                                                    <div class="h2 font-w300 text-white">22</div>
-                                                    <div class="h5 text-muted push-5-t">This Week</div>
-                                                </div>
-                                                <div class="col-xs-4">
-                                                    <div class="h2 font-w300 text-white">40</div>
-                                                    <div class="h5 text-muted push-5-t">This Month</div>
-                                                </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="font-w600">Melissa Markowitz</td>
+                                        <td>100032</td>
+                                        <td class="hidden-xs">12/12/1961</td>
+                                        <td class="hidden-xs">F</td>
+                                        <td class="hidden-xs">Arizona</td>
+                                        <td class="hidden-xs">Maricopa</td>
+                                        <td class="hidden-xs">Community & Family Services</td>
+                                        <td class="text-center">
+                                            <div class="btn-group">
+                                                <a class="btn btn-md btn-default" type="button" data-toggle="tooltip" title="View Details" href="recordService.html"><i class="fa fa-eye"></i> </a>
                                             </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- END Recorded Services Card -->
-                        </div>   
-                        <div class="col-lg-6">
-                            <!-- Progress Notes Card -->
-                            <div class="block">
-                                <div class="bg-image" style="background-image: url('assets/img/photos/photo33.jpg');">
-                                    <div class="bg-black-op">
-                                        <div class="block-content text-center">
-                                            <h3 class="h2 font-w300 text-uppercase text-white push-50-t">Progress Notes Documented</h3>
-                                            <h4 class="h5 text-white-op push-50">Arizona, US</h4>
-                                        </div>
-                                        <div class="block-content block-content-full text-center bg-black-op">
-                                            <div class="row push-5-t push-5">
-                                                <div class="col-xs-4">
-                                                    <div class="h2 font-w300 text-white">12</div>
-                                                    <div class="h5 text-muted push-5-t">Today</div>
-                                                </div>
-                                                <div class="col-xs-4">
-                                                    <div class="h2 font-w300 text-white">22</div>
-                                                    <div class="h5 text-muted push-5-t">This Week</div>
-                                                </div>
-                                                <div class="col-xs-4">
-                                                    <div class="h2 font-w300 text-white">40</div>
-                                                    <div class="h5 text-muted push-5-t">This Month</div>
-                                                </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="font-w600">Jerry West</td>
+                                        <td>100033</td>
+                                        <td class="hidden-xs">11/01/1981</td>
+                                        <td class="hidden-xs">M</td>
+                                        <td class="hidden-xs">Arizona</td>
+                                        <td class="hidden-xs">Maricopa</td>
+                                        <td class="hidden-xs">Community & Family Services</td>
+                                        <td class="text-center">
+                                            <div class="btn-group">
+                                                <a class="btn btn-md btn-default" type="button" data-toggle="tooltip" title="View Details" href="recordService.html"><i class="fa fa-eye"></i> </a>
                                             </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- END Progress Notes Card -->
-                        </div>   
-                        <div class="col-lg-6">
-                            <!-- Sync Timeliness Card -->
-                            <div class="block">
-                                <div class="bg-image" style="background-image: url('assets/img/photos/photo33.jpg');">
-                                    <div class="bg-black-op">
-                                        <div class="block-content text-center">
-                                            <h3 class="h2 font-w300 text-uppercase text-white push-50-t">Sync Timeliness (days)</h3>
-                                            <h4 class="h5 text-white-op push-50">Arizona, US</h4>
-                                        </div>
-                                        <div class="block-content block-content-full text-center bg-black-op">
-                                            <div class="row push-5-t push-5">
-                                                <div class="col-xs-4">
-                                                    <div class="h2 font-w300 text-white"> < 1</div>
-                                                    <div class="h5 text-muted push-5-t">Today</div>
-                                                </div>
-                                                <div class="col-xs-4">
-                                                    <div class="h2 font-w300 text-white">4</div>
-                                                    <div class="h5 text-muted push-5-t">This Week</div>
-                                                </div>
-                                                <div class="col-xs-4">
-                                                    <div class="h2 font-w300 text-white">8</div>
-                                                    <div class="h5 text-muted push-5-t">This Month</div>
-                                                </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="font-w600">Terry Garr</td>
+                                        <td>100034</td>
+                                        <td class="hidden-xs">01/01/1961</td>
+                                        <td class="hidden-xs">F</td>
+                                        <td class="hidden-xs">Arizona</td>
+                                        <td class="hidden-xs">Maricopa</td>
+                                        <td class="hidden-xs">Community & Family Services</td>
+                                        <td class="text-center">
+                                            <div class="btn-group">
+                                                <a class="btn btn-md btn-default" type="button" data-toggle="tooltip" title="View Details" href="recordService.html"><i class="fa fa-eye"></i> </a>
                                             </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- END Sync Timeliness Card -->
-                        </div> 
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <!-- Lines Chart -->
-                            <div class="block">
-                                <div class="block-header">
-                                    <h3 class="block-title">Number of PNs created vs. submitted within 3 days</h3>
-                                </div>
-                                <div class="block-content block-content-full text-center">
-                                    <!-- Lines Chart Container -->
-                                    <div style="height: 330px;"><canvas id="my_line_chart_09" class="js-chartjs-lines"></canvas></div>
-                                </div>
-                            </div>
-                            <!-- END Lines Chart -->
-                        </div>
-                        <div class="col-lg-6">
-                            <!-- Bars Chart -->
-                            <div class="block">
-                                <div class="block-header">
-                                    <h3 class="block-title">Services Recorded vs. Average</h3>
-                                </div>
-                                <div class="block-content block-content-full text-center">
-                                    <!-- Bars Chart Container -->
-                                    <div style="height: 330px;"><canvas id="my_bar_chart_01" class="js-chartjs-bars"></canvas></div>
-                                </div>
-                            </div>
-                            <!-- END Bars Chart -->
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="font-w600">Jamie Oliver</td>
+                                        <td>100035</td>
+                                        <td class="hidden-xs">07/01/1994</td>
+                                        <td class="hidden-xs">M</td>
+                                        <td class="hidden-xs">Arizona</td>
+                                        <td class="hidden-xs">Maricopa</td>
+                                        <td class="hidden-xs">Community & Family Services</td>
+                                        <td class="text-center">
+                                            <div class="btn-group">
+                                                <a class="btn btn-md btn-default" type="button" data-toggle="tooltip" title="View Details" href="recordService.html"><i class="fa fa-eye"></i> </a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="font-w600">Carson Palmer</td>
+                                        <td>100036</td>
+                                        <td class="hidden-xs">06/12/1986</td>
+                                        <td class="hidden-xs">M</td>
+                                        <td class="hidden-xs">Arizona</td>
+                                        <td class="hidden-xs">Maricopa</td>
+                                        <td class="hidden-xs">Community & Family Services</td>
+                                        <td class="text-center">
+                                            <div class="btn-group">
+                                                <a class="btn btn-md btn-default" type="button" data-toggle="tooltip" title="View Details" href="recordService.html"><i class="fa fa-eye"></i> </a>
+                                            </div>
+                                        </td>
+                                    </tr>                                                                        
+                                </tbody>
+                            </table>
                         </div>
                     </div>
-                    </div>
-                    <!-- END Dashboard Cards -->
+                    <!-- END Dynamic Table Full -->
+                    <!-- END My Block -->
                 </div>
                 <!-- END Page Content -->
             </main>
@@ -377,7 +349,7 @@
         <!-- Page Footer -->
             <footer id="page-footer" class="content-mini content-mini-full font-s12 bg-gray-lighter clearfix">
                 <div class="pull-right">
-                    <a class="font-w600" href="https://connect46.com" target="_blank">Connect46 LLC</a> &copy; 2017-2020
+                    <a class="font-w600" href="https://connect46.com" target="_blank">Connect46 LLC</a> &copy; <span class="js-year-copy">2017-2020</span>
                 </div>
             </footer>        
 
@@ -394,13 +366,14 @@
         <script src="assets/js/core/js.cookie.min.js"></script>
         <script src="assets/js/app.js"></script>
 
-        <!-- Page JS Plugins -->  
-        <script src="assets/js/pages/base_comp_charts_generic.js"></script>
-        <script src="assets/js/plugins/sparkline/jquery.sparkline.min.js"></script>
-        <script src="assets/js/plugins/chartjs/Chart.min.js"></script>        
+        <!-- Page JS Plugins -->
+        <script src="assets/js/plugins/datatables/jquery.dataTables.min.js"></script>        
+
         <!-- END Page JS Plugins -->
 
         <!-- Page JS Code -->
+        <script src="assets/js/pages/base_tables_datatables.js"></script>        
+
         <!-- END Page JS Code -->
     </body>
 </html>

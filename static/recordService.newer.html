@@ -226,6 +226,12 @@
                             <div class="block">
                                 <ul class="nav nav-tabs nav-tabs-alt nav-justified" data-toggle="tabs">
                                     <li class="active">
+                                        <a href="#btabs-alt-static-justified-demographics"><i class="fa fa-users"></i> Demographics</a>
+                                    </li>
+                                    <li>
+                                        <a href="#btabs-alt-static-justified-diagnosis"><i class="fa fa-stethoscope"></i> Diagnosis, Meds & Vitals</a>
+                                    </li>                                    
+                                    <li>
                                         <a href="#btabs-alt-static-justified-treatmentPlan"><i class="fa fa-list-ol"></i> Treatment Plan</a>
                                     </li>
                                     <!--li>
@@ -233,16 +239,10 @@
                                     </li-->
                                     <li>
                                         <a href="#btabs-alt-static-justified-progressNoteTemplates"><i class="fa fa-pencil"></i> Progress Notes</a>
-                                    </li>                                    
-                                    <li>
-                                        <a href="#btabs-alt-static-justified-demographics"><i class="fa fa-users"></i> Demographics</a>
                                     </li>
-                                    <li>
-                                        <a href="#btabs-alt-static-justified-diagnosis"><i class="fa fa-stethoscope"></i> Diagnosis, Meds & Vitals</a>
-                                    </li>                                    
                                 </ul>
                                 <div class="block-content tab-content">
-                                    <div class="tab-pane" id="btabs-alt-static-justified-demographics">
+                                    <div class="tab-pane active" id="btabs-alt-static-justified-demographics">
                                         <!--h4 class="font-w300 push-15">Demographics</h4-->
                                         <!-- BEGIN Demographics Tab -->
                                         <!-- Stats-->
@@ -630,7 +630,36 @@
                                                 </div>
                                             </div>
                                                 <div class="block">
-                                                    <h2 class="content-heading">Vitals Trends</h2>
+                                                    <h2 class="content-heading">Vitals</h2>
+                                                    <div class="row">
+                                                        <div class="col-lg-6">
+                                                            <!-- Lines Chart -->
+                                                            <div class="block">
+                                                                <div class="block-header">
+                                                                    <h3 class="block-title">BP (Child)</h3>
+                                                                </div>
+                                                                <div class="block-content block-content-full text-center">
+                                                                    <!-- Lines Chart Container -->
+                                                                    <div style="height: 330px;"><canvas class="js-chartjs-lines"></canvas></div>
+                                                                </div>
+                                                            </div>
+                                                            <!-- END Lines Chart -->
+                                                        </div>
+                                                        <div class="col-lg-6">
+                                                            <!-- Bars Chart -->
+                                                            <div class="block">
+                                                                <div class="block-header">
+                                                                    <h3 class="block-title">BMI</h3>
+                                                                </div>
+                                                                <div class="block-content block-content-full text-center">
+                                                                    <!-- Bars Chart Container -->
+                                                                    <div style="height: 330px;"><canvas class="js-chartjs-bars"></canvas></div>
+                                                                </div>
+                                                            </div>
+                                                            <!-- END Bars Chart -->
+                                                        </div>
+                                                    </div>
+                                                    <h2 class="content-heading">Sparkline</h2>
                                                     <div class="row">
                                                         <div class="col-lg-6">
                                                             <!-- Bars -->
@@ -641,23 +670,24 @@
                                                                             <button type="button" data-toggle="block-option" data-action="refresh_toggle" data-action-mode="demo"><i class="si si-refresh"></i></button>
                                                                         </li>
                                                                     </ul>
+                                                                    <h3 class="block-title">Bars</h3>
                                                                 </div>
                                                                 <div class="block-content">
                                                                     <div class="row items-push-2x text-center">
                                                                         <div class="col-xs-6 col-sm-4">
                                                                             <!-- Sparkline Bar 1 Container -->
-                                                                            <span class="js-slc-bar1">23,24,20,22,23,25,24,25</span>
-                                                                            <div class="push-10-t"><i class="text-muted"></i> BMI</div>
+                                                                            <span class="js-slc-bar1">4,3,2,4,5,7,8,4</span>
+                                                                            <div class="push-10-t"><i class="fa fa-ticket text-muted"></i> Tickets</div>
                                                                         </div>
                                                                         <div class="col-xs-6 col-sm-4">
                                                                             <!-- Sparkline Bar 2 Container -->
-                                                                            <span class="js-slc-bar2">66,83,81,75,83,82,80,82</span>
-                                                                            <div class="push-10-t"><i class="text-muted"></i> Pulse (child)</div>
+                                                                            <span class="js-slc-bar2">980,1210,1350,900,500,700,1500,1485</span>
+                                                                            <div class="push-10-t"><i class="fa fa-line-chart text-muted"></i> Earnings</div>
                                                                         </div>
                                                                         <div class="col-xs-12 col-sm-4">
                                                                             <!-- Sparkline Bar 3 Container -->
-                                                                            <span class="js-slc-bar3">20,22,22,24,26,24,28,24</span>
-                                                                            <div class="push-10-t"><i class="text-muted"></i> Respiration</div>
+                                                                            <span class="js-slc-bar3">8,11,9,8,7,5,10,12</span>
+                                                                            <div class="push-10-t"><i class="fa fa-suitcase text-muted"></i> Sales</div>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -673,141 +703,37 @@
                                                                             <button type="button" data-toggle="block-option" data-action="refresh_toggle" data-action-mode="demo"><i class="si si-refresh"></i></button>
                                                                         </li>
                                                                     </ul>
+                                                                    <h3 class="block-title">Lines</h3>
                                                                 </div>
                                                                 <div class="block-content">
                                                                     <div class="row items-push-2x text-center">
                                                                         <div class="col-xs-6 col-sm-4">
                                                                             <!-- Sparkline Line 1 Container -->
-                                                                            <span class="js-slc-line1">134,140,116,128,116,140,145</span>
-                                                                            <div class="push-10-t"><i class="text-muted"></i> Weight</div>
+                                                                            <span class="js-slc-line1">4,3,2,4,5,7,8,4</span>
+                                                                            <div class="push-10-t"><i class="fa fa-ticket text-muted"></i> Tickets</div>
                                                                         </div>
                                                                         <div class="col-xs-6 col-sm-4">
                                                                             <!-- Sparkline Line 2 Container -->
-                                                                            <span class="js-slc-line2">64,64,64,64,64,64,64,64</span>
-                                                                            <div class="push-10-t"><i class="text-muted"></i> Height</div>
+                                                                            <span class="js-slc-line2">980,1210,1350,900,500,700,1500,1485</span>
+                                                                            <div class="push-10-t"><i class="fa fa-line-chart text-muted"></i> Earnings</div>
                                                                         </div>
                                                                         <div class="col-xs-12 col-sm-4">
                                                                             <!-- Sparkline Line 3 Container -->
-                                                                            <span class="js-slc-line3">99,100,101,101,99,101,100,100</span>
-                                                                            <div class="push-10-t"><i class="text-muted"></i> Temperature</div>
+                                                                            <span class="js-slc-line3">8,11,9,8,7,5,10,12</span>
+                                                                            <div class="push-10-t"><i class="fa fa-suitcase text-muted"></i> Sales</div>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                             <!-- END Lines -->
                                                         </div>
-                                                    </div>
-                                                    <h2 class="content-heading">Detailed Vitals</h2>
-                                                    <div class="row">
-                                                        <div class="col-lg-6">
-                                                            <!-- Lines Chart -->
-                                                            <div class="block">
-                                                                <div class="block-header">
-                                                                    <h3 class="block-title">BP (Child)</h3>
-                                                                </div>
-                                                                <div class="block-content block-content-full text-center">
-                                                                    <!-- Lines Chart Container -->
-                                                                    <div style="height: 330px;"><canvas id="my_line_chart_01" class="js-chartjs-lines"></canvas></div>
-                                                                </div>
-                                                            </div>
-                                                            <!-- END Lines Chart -->
-                                                        </div>
-                                                        <div class="col-lg-6">
-                                                            <!-- Lines Chart -->
-                                                            <div class="block">
-                                                                <div class="block-header">
-                                                                    <h3 class="block-title">BMI</h3>
-                                                                </div>
-                                                                <div class="block-content block-content-full text-center">
-                                                                    <!-- Lines Chart Container -->
-                                                                    <div style="height: 330px;"><canvas id="my_line_chart_02" class="js-chartjs-lines"></canvas></div>
-                                                                </div>
-                                                            </div>
-                                                            <!-- END Lines Chart -->
-                                                        </div>
-                                                        <div class="col-lg-6">
-                                                            <!-- Lines Chart -->
-                                                            <div class="block">
-                                                                <div class="block-header">
-                                                                    <h3 class="block-title">Pulse (Child)</h3>
-                                                                </div>
-                                                                <div class="block-content block-content-full text-center">
-                                                                    <!-- Lines Chart Container -->
-                                                                    <div style="height: 330px;"><canvas id="my_line_chart_03" class="js-chartjs-lines"></canvas></div>
-                                                                </div>
-                                                            </div>
-                                                            <!-- END Lines Chart -->
-                                                        </div>
-                                                        <div class="col-lg-6">
-                                                            <!-- Lines Chart -->
-                                                            <div class="block">
-                                                                <div class="block-header">
-                                                                    <h3 class="block-title">Respiration (breaths / min)</h3>
-                                                                </div>
-                                                                <div class="block-content block-content-full text-center">
-                                                                    <!-- Lines Chart Container -->
-                                                                    <div style="height: 330px;"><canvas id="my_line_chart_04" class="js-chartjs-lines"></canvas></div>
-                                                                </div>
-                                                            </div>
-                                                            <!-- END Lines Chart -->
-                                                        </div>
-                                                        <div class="col-lg-6">
-                                                            <!-- Lines Chart -->
-                                                            <div class="block">
-                                                                <div class="block-header">
-                                                                    <h3 class="block-title">Temperature (Farenheit)</h3>
-                                                                </div>
-                                                                <div class="block-content block-content-full text-center">
-                                                                    <!-- Lines Chart Container -->
-                                                                    <div style="height: 330px;"><canvas id="my_line_chart_05" class="js-chartjs-lines"></canvas></div>
-                                                                </div>
-                                                            </div>
-                                                            <!-- END Lines Chart -->
-                                                        </div>
-                                                        <div class="col-lg-6">
-                                                            <!-- Lines Chart -->
-                                                            <div class="block">
-                                                                <div class="block-header">
-                                                                    <h3 class="block-title">Weight (lbs) </h3>
-                                                                </div>
-                                                                <div class="block-content block-content-full text-center">
-                                                                    <!-- Lines Chart Container -->
-                                                                    <div style="height: 330px;"><canvas id="my_line_chart_06" class="js-chartjs-lines"></canvas></div>
-                                                                </div>
-                                                            </div>
-                                                            <!-- END Lines Chart -->
-                                                        </div>                                                     
-                                                        <div class="col-lg-6">
-                                                            <!-- Lines Chart -->
-                                                            <div class="block">
-                                                                <div class="block-header">
-                                                                    <h3 class="block-title">Girth (inches)</h3>
-                                                                </div>
-                                                                <div class="block-content block-content-full text-center">
-                                                                    <!-- Lines Chart Container -->
-                                                                    <div style="height: 330px;"><canvas id="my_line_chart_07" class="js-chartjs-lines"></canvas></div>
-                                                                </div>
-                                                            </div>
-                                                            <!-- END Lines Chart -->
-                                                        </div>
-                                                        <div class="col-lg-6">
-                                                            <!-- Lines Chart -->
-                                                            <div class="block">
-                                                                <div class="block-header">
-                                                                    <h3 class="block-title">Height (in)</h3>
-                                                                </div>
-                                                                <div class="block-content block-content-full text-center">
-                                                                    <!-- Lines Chart Container -->
-                                                                    <div style="height: 330px;"><canvas id="my_line_chart_08" class="js-chartjs-lines"></canvas></div>
-                                                                </div>
-                                                            </div>
-                                                            <!-- END Lines Chart -->
-                                                        </div>                                                        
-                                                    </div>
+                                                    </div>                   
+
+
                                                 </div>                                            
                                             <!-- END  Diagnosis, Meds and Vitals-->
                                     </div>
-                                    <div class="tab-pane active" id="btabs-alt-static-justified-treatmentPlan">
+                                    <div class="tab-pane" id="btabs-alt-static-justified-treatmentPlan">
                                                     <!-- Treatment Plan -->
                                                     <div class="block">
                                                         <!--div class="block-header bg-gray-lighter">
@@ -926,9 +852,9 @@
                                     </div>
                                     <div class="tab-pane" id="btabs-alt-static-justified-progressNoteTemplates">
                                         <h4 class="font-w300 push-15">Cost Center: (3090) AZ Maricopa - Community and Family Services</h4>
-                                        <!--div class="js-wizard-simple block"-->
+                                        <div class="js-wizard-simple block">
                                             <!-- Step Tabs -->
-                                            <!--ul class="nav nav-tabs nav-tabs-alt nav-justified">
+                                            <ul class="nav nav-tabs nav-tabs-alt nav-justified">
                                                 <li class="active">
                                                     <a href="#core" data-toggle="tab">1. Core Information</a>
                                                 </li>
@@ -1073,7 +999,7 @@
                                                         </div>
                                                     </div>
                                                     <!-- END Step 1 -->
-                                                    <!--div class="tab-pane fade push-30-t push-50" id="attendees"-->
+                                                    <div class="tab-pane fade push-30-t push-50" id="attendees">
                                                         <!-- Step 2 - Attendees -->
                                                         <div class="block">
                                                             <div class="block-header">
@@ -1290,10 +1216,9 @@
                                                 </div>
                                                         </div>
                                                         <!-- END Step 2 - Attendees -->
-                                                    <!--/div-->
+                                                    </div>
                                                 <!-- Step 3 - GO (Goals, Objectives) -->
-                                                    <!--div class="tab-pane fade push-30-t push-50" id="go"-->
-                                                            <div class="block-header bg-gray-lighter">
+                                                    <div class="tab-pane fade push-30-t push-50" id="go">
                                                             <div class="block-header bg-gray-lighter">
                                                                 <h5>Checklist</h5>
                                                             </div>
@@ -1313,17 +1238,9 @@
 
                                 <!-- Tasks List -->
                                 <h2 class="content-heading">Meeting Elements</h2>
-<!--Intros, review confidentiality and its limits, review meeting ground rules, review today's meeting obj, review and update SNCD, Review supports / crisi plan -->
-<!-- TAOC - basic needs / financial, living sit, crisi/safety, medical, cultural / spritual, psycl/psycht, education/voc/soc/community, family, legal, transition to adulthgood -->
-<!--text entry sections: Transition / Discharge plans -->
-<!-- select goals: 3-4 Lorem ipsums -->
-<!-- select strengths: Code Desc (short lorem) Strength Dessxccr (lorem)-->
-<!--text entry sections: WHat are the strengths and progrss noytes since the lasyt CFT meetings -->
-<!--Diagnosis, Meds, vitals summary ?-->
-<!--text entry sections: Health medical and niutritional concerns -->
-<!--text entry sections: Brainstorming for this meeting (what are the currrent areas of conern and unresolved challenges to increase fammiluy indpendence?-->
-<!-- Next CFT / Taregt Review date: Date entry-->
-<!-- Next CFT / Taregt Review location: text entry-->
+                                <!--Intros, review confidentiality and its limits, review meeting ground rules, review today's meeting obj, review and update SNCD, Review supports / crisi plan -->
+                                <!-- TAOC - basic needs / financial, living sit, crisi/safety, medical, cultural / spritual, psycl/psycht, education/voc/soc/community, family, legal, transition to adulthgood -->
+                                <!-- select goals: 
                                 <div class="js-task-list">
                                     <!-- Task -->
                                     <div class="js-task block block-rounded push-5 animated fadeIn" data-task-id="8" data-task-completed="false" data-task-starred="false">
@@ -1539,7 +1456,7 @@
                             </div>
                             <!-- END Tasks -->
                         </div>
-                                                    <!--/div-->
+                                                    </div>
                                                 <!-- END Step 3 - GO (Goals, Objectives) -->
                                                     <!-- Step 4 - Signature -->
                                                     <div class="tab-pane fade push-30-t push-50" id="clientSign">
@@ -1571,7 +1488,7 @@
                                                 <!-- END Steps Navigation -->
                                             </form>
                                             <!-- END Form -->
-                                        <!--/div-->
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -1620,7 +1537,7 @@
         <script src="assets/js/plugins/chartjs/Chart.min.js"></script>
 
         <!-- Page JS Code -->
-        <script src="assets/js/pages/base_comp_charts_generic.js"></script>
+        <script src="assets/js/pages/base_comp_charts.js"></script>
 
         <!-- Page JS Plugins -->
         <script>
@@ -1634,7 +1551,11 @@
 					BaseCompCharts.init();
 				});
             });
-        </script>		
+			
+			
+        </script>
+       
+		
 
         <!-- Page JS Code -->
 
