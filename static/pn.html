@@ -36,9 +36,6 @@
         <!-- Web fonts -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400italic,600,700%7COpen+Sans:300,400,400italic,600,700">
 
-        <!-- Page JS Plugins CSS -->
-        <link rel="stylesheet" href="assets/js/plugins/datatables/jquery.dataTables.min.css">
-
         <!-- Bootstrap and OneUI CSS framework -->
         <link rel="stylesheet" href="assets/css/bootstrap.min.css">
         <link rel="stylesheet" id="css-main" href="assets/css/oneui.min.css">
@@ -202,13 +199,13 @@
                     <div class="row items-push">
                         <div class="col-sm-7">
                             <h1 class="page-heading">
-                                Pending Progress Notes
+                                Title <small>Subtitle.</small>
                             </h1>
                         </div>
                         <div class="col-sm-5 text-right hidden-xs">
                             <ol class="breadcrumb push-10-t">
-                                <li>Home</li>
-                                <li><a class="link-effect" href="">Progress Note Documentation</a></li>
+                                <li>Category</li>
+                                <li><a class="link-effect" href="">Page</a></li>
                             </ol>
                         </div>
                     </div>
@@ -217,105 +214,225 @@
 
                 <!-- Page Content -->
                 <div class="content">
-                    <!-- My Block -->
-                            <!-- Dynamic Table Full -->
-                    <div class="block">
-                        <!--p>Table with list of Pns pending. Table columns - patient name (DOB, ID),  Program, Service item, PN template name, Start Date, Due Date</p-->
-                        <div class="block-content">
-                            <!-- DataTables init on table by adding .js-dataTable-full class, functionality initialized in js/pages/base_tables_datatables.js -->
-                            <table class="table table-header-bg js-dataTable-full">
-                                <thead>
-                                    <tr>
-                                        <th>Name</th>
-                                        <th class="hidden-xs">Program</th>
-                                        <th>Service Item</th>
-                                        <th>PN Template Name</th>
-                                        <th class="hidden-xs">Started Date</th>
-                                        <th class="text-center" style="width: 10%;">Due Date</th>
-                                        <th>Action</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td class="font-w600">
-                                            <a data-toggle="modal" data-target="#modal-large" type="button">Eugene Burke</a>
-                                        </td>
-                                        <td class="hidden-xs">Community & Family Services</td>
-                                        <td class="hidden-xs">Case Management</td>
-                                        <td class="hidden-xs">Contact Note</td>
-                                        <td class="hidden-xs">08/25/2017</td>
-                                        <td class="text-center">
-                                            <div class="btn-group">
-                                                <a class="btn btn-md btn-danger" type="button" data-toggle="tooltip" title="Overdue">08/28/2017</a>
-                                            </div>
-                                        </td>
-                                        <td class="text-center">
-                                            <div class="btn-group">
-                                                <a class="btn btn-md btn-default" type="button" data-toggle="tooltip" title="View Details" href="progressNoteTemplate.html"><i class="fa fa-pencil"></i> </a>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="font-w600">
-                                            <a data-toggle="modal" data-target="#modal-large" type="button">Eugene Burke</a>
-                                        </td>
-                                        <td class="hidden-xs">Community & Family Services</td>
-                                        <td class="hidden-xs">Case Management</td>
-                                        <td class="hidden-xs">CFT Note</td>
-                                        <td class="hidden-xs">08/25/2017</td>
-                                        <td class="text-center">
-                                            <div class="btn-group">
-                                                <a class="btn btn-md btn-danger" type="button" data-toggle="tooltip" title="Overdue">08/28/2017</a>
-                                            </div>
-                                        </td>
-                                        <td class="text-center">
-                                            <div class="btn-group">
-                                                <a class="btn btn-md btn-default" type="button" data-toggle="tooltip" title="View Details" href="progressNoteTemplate.html"><i class="fa fa-pencil"></i> </a>
-                                            </div>
-                                        </td>
-                                    </tr> 
-                                    <tr>
-                                        <td class="font-w600">
-                                            <a data-toggle="modal" data-target="#modal-large" type="button">Carson Palmer</a>
-                                        </td>
-                                        <td class="hidden-xs">Community & Family Services</td>
-                                        <td class="hidden-xs">Case Management</td>
-                                        <td class="hidden-xs">CFT Note</td>
-                                        <td class="hidden-xs">08/24/2017</td>
-                                        <td class="text-center">
-                                            <div class="btn-group">
-                                                <a class="btn btn-md btn-warning" type="button" data-toggle="tooltip" title="Overdue">08/27/2017</a>
-                                            </div>
-                                        </td>
-                                        <td class="text-center">
-                                            <div class="btn-group">
-                                                <a class="btn btn-md btn-default" type="button" data-toggle="tooltip" title="View Details" href="progressNoteTemplate.html"><i class="fa fa-pencil"></i> </a>
-                                            </div>
-                                        </td>
-                                    </tr> 
-                                    <tr>
-                                        <td class="font-w600">
-                                            <a data-toggle="modal" data-target="#modal-large" type="button">Mark Tannenbaum</a>
-                                        </td>
-                                        <td class="hidden-xs">Community & Family Services</td>
-                                        <td class="hidden-xs">Case Management</td>
-                                        <td class="hidden-xs">CFT Note</td>
-                                        <td class="hidden-xs">08/27/2017</td>
-                                        <td class="text-center">
-                                            <div class="btn-group">
-                                                09/01/2017
-                                        </td>
-                                        <td class="text-center">
-                                            <div class="btn-group">
-                                                <a class="btn btn-md btn-default" type="button" data-toggle="tooltip" title="View Details" href="progressNoteTemplate.html"><i class="fa fa-pencil"></i> </a>
-                                            </div>
-                                        </td>
-                                    </tr> 
-                                </tbody>
-                            </table>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <!-- Attendees Table -->
+                            <div class="block">
+                                <div class="block-header">
+                                    <h3 class="block-title">Attendees</h3>
+                                </div>
+                                <div class="block-content">
+                                    <table class="js-table-checkable table table-hover">
+                                        <thead>
+                                            <tr>
+                                                <th class="text-center" style="width: 70px;">
+                                                    <label class="css-input css-checkbox css-checkbox-primary remove-margin-t remove-margin-b">
+                                                        <input type="checkbox" id="check-all" name="check-all"><span></span>
+                                                    </label>
+                                                </th>
+                                                <th>Name</th>
+                                                <th class="hidden-xs">Relationship</th>
+                                                <th style="width: 15%;">Contact Info</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="text-center">
+                                                    <label class="css-input css-checkbox css-checkbox-primary">
+                                                        <input type="checkbox" id="row_1" name="row_1"><span></span>
+                                                    </label>
+                                                </td>
+                                                <td>Jason Arrozzo
+                                                </td>
+                                                <td>Social Worker / Case Manager
+                                                </td>
+                                                <td>(520) 665-1234, (520) 665-1235
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">
+                                                    <label class="css-input css-checkbox css-checkbox-primary">
+                                                        <input type="checkbox" id="row_1" name="row_1"><span></span>
+                                                    </label>
+                                                </td>                                                
+                                                <td>Mark Christian
+                                                </td>
+                                                <td>Attorney
+                                                </td>
+                                                <td>(650) 555-1234
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">
+                                                    <label class="css-input css-checkbox css-checkbox-primary">
+                                                        <input type="checkbox" id="row_1" name="row_1"><span></span>
+                                                    </label>
+                                                </td>
+                                                <td>April Lasseter
+                                                </td>
+                                                <td>School Official
+                                                </td>
+                                                <td>(520) 665-1234 ext.12530
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">
+                                                    <label class="css-input css-checkbox css-checkbox-primary">
+                                                        <input type="checkbox" id="row_1" name="row_1"><span></span>
+                                                    </label>
+                                                </td>
+                                                <td>Laurie Johnson
+                                                </td>
+                                                <td>Mother
+                                                </td>
+                                                <td>(620) 665-1234
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">
+                                                    <label class="css-input css-checkbox css-checkbox-primary">
+                                                        <input type="checkbox" id="row_1" name="row_1"><span></span>
+                                                    </label>
+                                                </td>
+                                                <td>Mark Johnson
+                                                </td>
+                                                <td>Father
+                                                </td>
+                                                <td>(620) 665-1235
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">
+                                                    <label class="css-input css-checkbox css-checkbox-primary">
+                                                        <input type="checkbox" id="row_1" name="row_1"><span></span>
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <div class="form-group">
+                                                        <label class="sr-only" for="example-if-name">Name</label>
+                                                        <input class="form-control" type="Name" id="example-if-name" name="example-if-name" placeholder="Enter Full Name..">
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="form-group">
+                                                        <label class="sr-only" for="example-if-rel">Relationship</label>
+                                                        <input class="form-control" type="relationship" id="example-if-relationship" name="example-if-relationship" placeholder="Select Relationship">
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="form-group">
+                                                        <label class="sr-only" for="example-if-phone">Phone</label>
+                                                        <input class="form-control" type="email" id="example-if-phone" name="example-if-phone" placeholder="Enter Phone..">
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <!-- END Attendees Table -->
+                        </div>
+                        <div class="col-lg-6">
+                            <!-- Team Members Table -->
+                            <div class="block">
+                                <div class="block-header">
+                                    <h3 class="block-title">Team Members</h3>
+                                </div>
+                                <div class="block-content">
+                                    <table class="js-table-checkable table table-hover">
+                                        <thead>
+                                            <tr>
+                                                <th class="text-center" style="width: 70px;">
+                                                    <label class="css-input css-checkbox css-checkbox-primary remove-margin-t remove-margin-b">
+                                                        <input type="checkbox" id="check-all" name="check-all"><span></span>
+                                                    </label>
+                                                </th>
+                                                <th>Name</th>
+                                                <th class="hidden-xs"> Relationship</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="text-center">
+                                                    <label class="css-input css-checkbox css-checkbox-primary">
+                                                        <input type="checkbox" id="row_1" name="row_1"><span></span>
+                                                    </label>
+                                                </td>
+                                                <td>Michelle Thomas
+                                                </td>
+                                                <td>Program Manager
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">
+                                                    <label class="css-input css-checkbox css-checkbox-primary">
+                                                        <input type="checkbox" id="row_1" name="row_1"><span></span>
+                                                    </label>
+                                                </td>                                                
+                                                <td>Eileen Markson
+                                                </td>
+                                                <td>Utilization Review
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">
+                                                    <label class="css-input css-checkbox css-checkbox-primary">
+                                                        <input type="checkbox" id="row_1" name="row_1"><span></span>
+                                                    </label>
+                                                </td>
+                                                <td>Regan Fernandez
+                                                </td>
+                                                <td>Clinical Reviewer
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">
+                                                    <label class="css-input css-checkbox css-checkbox-primary">
+                                                        <input type="checkbox" id="row_1" name="row_1"><span></span>
+                                                    </label>
+                                                </td>
+                                                <td>Jamie Azkhaban
+                                                </td>
+                                                <td>Primary Therapist
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">
+                                                    <label class="css-input css-checkbox css-checkbox-primary">
+                                                        <input type="checkbox" id="row_1" name="row_1"><span></span>
+                                                    </label>
+                                                </td>
+                                                <td>Robert Mullen
+                                                </td>
+                                                <td>Psychiatrist
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">
+                                                    <label class="css-input css-checkbox css-checkbox-primary">
+                                                        <input type="checkbox" id="row_1" name="row_1"><span></span>
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <div class="form-group">
+                                                        <label class="sr-only" for="example-if-name">Name</label>
+                                                        <input class="form-control" type="Name" id="example-if-name" name="example-if-name" placeholder="Enter Full Name..">
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="form-group">
+                                                        <label class="sr-only" for="example-if-rel">Relationship</label>
+                                                        <input class="form-control" type="relationship" id="example-if-relationship" name="example-if-relationship" placeholder="Select Relationship">
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <!-- END Team Members Table -->
                         </div>
                     </div>
-                    <!-- END Dynamic Table Full -->
                 </div>
                 <!-- END Page Content -->
             </main>
@@ -331,83 +448,6 @@
             </footer>   
         <!-- END Page Footer -->
 
-        <!-- Large Modal -->
-        <div class="modal" id="modal-large" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog modal-lg">
-                <div class="modal-content">
-                    <div class="block block-themed block-transparent remove-margin-b">
-                        <div class="block-header bg-primary-dark">
-                            <ul class="block-options">
-                                <li>
-                                    <button data-dismiss="modal" type="button"><i class="si si-close"></i></button>
-                                </li>
-                            </ul>
-                            <h3 class="block-title">Patient Detail</h3>
-                        </div>
-                        <div class="block-content">
-                            <!-- Diagnosis -->
-                            <div class="block">
-                                <div class="block-header bg-gray-lighter">
-                                    <p><b>DOB</b>: 10/01/1981</p>
-                                    <p><b>Gender</b>: M</p>
-                                </div>
-                                <div class="block-content">
-                                    <table class="table table-borderless table-striped table-vcenter">
-                                        <thead>
-                                            <tr>
-                                                <th>Diagnosis Code</th>
-                                                <th>Description</th>
-                                                <th>Active</th>
-                                                <th class="hidden-xs">Diagnosis Date</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>F34.81
-                                                </td>
-                                                <td>Disruptive Mood Dysregulation Disorder
-                                                </td>
-                                                <td>Active
-                                                </td>
-                                                <td>11/30/2002
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>F12.20
-                                                </td>
-                                                <td>Cannabis Use Disorder, Severe
-                                                </td>
-                                                <td>Active
-                                                </td>
-                                                <td>11/30/2004
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>F42.1
-                                                </td>
-                                                <td>Obsessive Complusive Disorder
-                                                </td>
-                                                <td>Inactive
-                                                </td>
-                                                <td>09/01/2001
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                            <!-- END  Diagnosis -->
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button class="btn btn-sm btn-default" type="button" data-dismiss="modal">Close</button>
-                        <button class="btn btn-sm btn-primary" type="button" data-dismiss="modal"><i class="fa fa-check"></i> Ok</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- END Large Modal -->
-
         <!-- OneUI Core JS: jQuery, Bootstrap, slimScroll, scrollLock, Appear, CountTo, Placeholder, Cookie and App.js -->
         <script src="assets/js/core/jquery.min.js"></script>
         <script src="assets/js/core/bootstrap.min.js"></script>
@@ -420,12 +460,10 @@
         <script src="assets/js/app.js"></script>
 
         <!-- Page JS Plugins -->
-        <script src="assets/js/plugins/datatables/jquery.dataTables.min.js"></script>        
 
         <!-- END Page JS Plugins -->
 
         <!-- Page JS Code -->
-        <script src="assets/js/pages/base_tables_datatables.js"></script>        
 
         <!-- END Page JS Code -->
     </body>
